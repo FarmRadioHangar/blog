@@ -12,7 +12,7 @@ title = "Hello Mathjax and Highlight.js"
 +++
 <div>$$\frac{1}{\sqrt{x}}$$</div>
 
-Wait lets see what some syntax highlighting looks like! And a bit of extra stuff in here
+Wait Wait wait....Wait lets see what some syntax highlighting looks like! And a bit of extra stuff in here
 
 ```html
 <section id="main">
