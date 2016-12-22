@@ -1,5 +1,5 @@
 languageCode = "en-us"
-BaseUrl= "http://farmradiohangar.github.io/"
+BaseUrl= "https://farmradiohangar.github.io/"
 LanguageCode= "en-us"
 Title= "Farm Radio Hangar"
 paginate = 5
