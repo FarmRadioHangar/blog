@@ -1,5 +1,5 @@
 languageCode = "en-us"
-BaseUrl= "http://hangar.farmradio.org/"
+BaseUrl= "http://farmradiohangar.github.io/"
 LanguageCode= "en-us"
 Title= "Farm Radio Hangar"
 paginate = 5
@@ -10,11 +10,11 @@ canonifyurls = true
 [params]
   description = "Farm Radio International's Hangar - Radio & ICT Innovation Lab"
   cover = "images/cover.jpg"
-#  author = "FRI Hangar crew"
-#  authorlocation = "Arusha, Tanzania"
-#  authorwebsite = "http://www.farmradio.org"
-#  bio= "my bio"
-#  logo = "images/pazasautilogo.png"
+  author = "FRI Hangar crew"
+  authorlocation = "Arusha, Tanzania"
+  authorwebsite = "http://www.farmradio.org"
+  bio= "my bio"
+  logo = "images/pazasautilogo.png"
   # googleAnalyticsUserID = "UA-79101-12"
   # Optional RSS-Link, if not provided it defaults to the standard index.xml
   # RSSLink = "http://feeds.feedburner.com/..."
