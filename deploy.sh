@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# from https://github.com/spencerlyon2/hugo_gh_blog/blob/master/deploy.sh
-
-echo -e "\033[0;32mDeploying updates to Github...\033[0m"
+echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
-hugo -t casper --buildDrafts
+hugo -t casper
 
+# Go To Public folder
+cd public
 # Add changes to git.
 git add -A
 
@@ -19,5 +19,6 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin master
-#git subtree push --prefix=public git@github.com:Farmradiohangar/Farmradiohangar.github.io.git public 
-git submodule push --prefix=public git@github.com:Farmradiohangar/Farmradiohangar.github.io.git public 
+
+# Come Back
+cd ..
