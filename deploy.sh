@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# from https://github.com/spencerlyon2/hugo_gh_blog/blob/master/deploy.sh
+
 echo -e "\033[0;32mDeploying updates to Github...\033[0m"
 
 # Build the project.
