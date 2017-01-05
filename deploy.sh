@@ -19,4 +19,5 @@ git commit -m "$msg"
 
 # Push source and build repos.
 git push origin master
-git subtree push --prefix=public git@github.com:Farmradiohangar/Farmradiohangar.github.io.git public 
+#git subtree push --prefix=public git@github.com:Farmradiohangar/Farmradiohangar.github.io.git public 
+git submodule push --prefix=public git@github.com:Farmradiohangar/Farmradiohangar.github.io.git public 
