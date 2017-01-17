@@ -7,6 +7,8 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 # Build the project.
 hugo -t casper
 
+chmod 600 ~/.ssh/id_rsa
+
 git checkout master
 
 # Add changes to git.
