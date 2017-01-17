@@ -2,40 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Farm Radio Hangar</title>
-    <link>https://hangar.farmradio.fm/index.xml</link>
+    <link>http://hangar.farmradio.fm/index.xml</link>
     <description>Recent content on Farm Radio Hangar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyleft - 2017</copyright>
     <lastBuildDate>Tue, 17 Jan 2017 20:47:44 +0300</lastBuildDate>
-    <atom:link href="https://hangar.farmradio.fm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://hangar.farmradio.fm/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>travisme</title>
-      <link>https://hangar.farmradio.fm/post/post-title/</link>
+      <link>http://hangar.farmradio.fm/post/post-title/</link>
       <pubDate>Tue, 17 Jan 2017 20:47:44 +0300</pubDate>
       
-      <guid>https://hangar.farmradio.fm/post/post-title/</guid>
+      <guid>http://hangar.farmradio.fm/post/post-title/</guid>
       <description>&lt;p&gt;try this&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>helloman again</title>
-      <link>https://hangar.farmradio.fm/post/post-title/</link>
+      <link>http://hangar.farmradio.fm/post/post-title/</link>
       <pubDate>Tue, 17 Jan 2017 15:14:46 +0300</pubDate>
       
-      <guid>https://hangar.farmradio.fm/post/post-title/</guid>
+      <guid>http://hangar.farmradio.fm/post/post-title/</guid>
       <description>&lt;p&gt;here comes trouble - here comes the danger&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>helloman</title>
-      <link>https://hangar.farmradio.fm/post/post-title/</link>
+      <link>http://hangar.farmradio.fm/post/post-title/</link>
       <pubDate>Tue, 17 Jan 2017 15:04:57 +0300</pubDate>
       
-      <guid>https://hangar.farmradio.fm/post/post-title/</guid>
+      <guid>http://hangar.farmradio.fm/post/post-title/</guid>
       <description>&lt;p&gt;here we go again
 and again&lt;/p&gt;
 </description>
@@ -43,10 +43,10 @@ and again&lt;/p&gt;
     
     <item>
       <title>testing</title>
-      <link>https://hangar.farmradio.fm/post/testing/</link>
+      <link>http://hangar.farmradio.fm/post/testing/</link>
       <pubDate>Fri, 06 Jan 2017 15:32:51 +0300</pubDate>
       
-      <guid>https://hangar.farmradio.fm/post/testing/</guid>
+      <guid>http://hangar.farmradio.fm/post/testing/</guid>
       <description>&lt;p&gt;hello world hello again
 and again and again
 Gernest and surfacescan&lt;/p&gt;
@@ -55,10 +55,10 @@ Gernest and surfacescan&lt;/p&gt;
     
     <item>
       <title>bart testing math and code</title>
-      <link>https://hangar.farmradio.fm/post/bart-testing-math-and-code/</link>
+      <link>http://hangar.farmradio.fm/post/bart-testing-math-and-code/</link>
       <pubDate>Thu, 05 Jan 2017 12:28:09 +0300</pubDate>
       
-      <guid>https://hangar.farmradio.fm/post/bart-testing-math-and-code/</guid>
+      <guid>http://hangar.farmradio.fm/post/bart-testing-math-and-code/</guid>
       <description>&lt;p&gt;Getting in here now
 and even a little bit deeper I&amp;rsquo;d say&lt;/p&gt;
 </description>
@@ -66,10 +66,10 @@ and even a little bit deeper I&amp;rsquo;d say&lt;/p&gt;
     
     <item>
       <title>Hello Mathjax and Highlight.js</title>
-      <link>https://hangar.farmradio.fm/post/hello-mathjax-and-highligh/</link>
+      <link>http://hangar.farmradio.fm/post/hello-mathjax-and-highligh/</link>
       <pubDate>Fri, 16 Dec 2016 14:54:24 +0300</pubDate>
       
-      <guid>https://hangar.farmradio.fm/post/hello-mathjax-and-highligh/</guid>
+      <guid>http://hangar.farmradio.fm/post/hello-mathjax-and-highligh/</guid>
       <description>&lt;div&gt;$$\frac{1}{\sqrt{x}}$$&lt;/div&gt;
 
 &lt;p&gt;Wait Wait wait&amp;hellip;.Wait lets see what some syntax highlighting looks like! And a bit of extra stuff in here&lt;/p&gt;
@@ -105,10 +105,10 @@ clean:
     
     <item>
       <title>Uliza:Connecting broadcasters and farmers for better radio</title>
-      <link>https://hangar.farmradio.fm/post/uliza-connecting-broadcasters-and-farmers/</link>
+      <link>http://hangar.farmradio.fm/post/uliza-connecting-broadcasters-and-farmers/</link>
       <pubDate>Fri, 09 Sep 2016 10:54:24 +0200</pubDate>
       
-      <guid>https://hangar.farmradio.fm/post/uliza-connecting-broadcasters-and-farmers/</guid>
+      <guid>http://hangar.farmradio.fm/post/uliza-connecting-broadcasters-and-farmers/</guid>
       <description>
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;//www.youtube.com/embed/I3chKFOP4QE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
@@ -149,16 +149,16 @@ Broadcaster Clara Moita of Radio 5 in Arusha, Tanzania, on a visit to The Hangar
     
     <item>
       <title>Mapping our impact</title>
-      <link>https://hangar.farmradio.fm/post/mapping-our-impact/</link>
+      <link>http://hangar.farmradio.fm/post/mapping-our-impact/</link>
       <pubDate>Thu, 18 Feb 2016 14:58:37 +0300</pubDate>
       
-      <guid>https://hangar.farmradio.fm/post/mapping-our-impact/</guid>
+      <guid>http://hangar.farmradio.fm/post/mapping-our-impact/</guid>
       <description>&lt;p&gt;With upwards of 35 weekly broadcasts across sub-Saharan Africa, estimating audiences is a challenging but essential job for Farm Radio International. Radio goes a long way but it does not go everywhere. Hills and valleys play a huge role in determining whether or not a given community can listen. If we are to measure the impact of broadcasts in a meaningful way, it is important to know both where the signal goes and where it does not go.&lt;/p&gt;
 
 
 &lt;figure &gt;
     
-        &lt;img src=&#34;https://hangar.farmradio.fm/images/2016/Feb/Radio_5_Arusha_web.png&#34; alt=&#34;Radio 5 coverage map&#34; /&gt;
+        &lt;img src=&#34;http://hangar.farmradio.fm/images/2016/Feb/Radio_5_Arusha_web.png&#34; alt=&#34;Radio 5 coverage map&#34; /&gt;
     
     
     &lt;figcaption&gt;
@@ -183,10 +183,10 @@ Broadcaster Clara Moita of Radio 5 in Arusha, Tanzania, on a visit to The Hangar
     
     <item>
       <title>Innovations: Beeping for vital information</title>
-      <link>https://hangar.farmradio.fm/post/beep-for-information/</link>
+      <link>http://hangar.farmradio.fm/post/beep-for-information/</link>
       <pubDate>Thu, 04 Feb 2016 15:26:39 +0300</pubDate>
       
-      <guid>https://hangar.farmradio.fm/post/beep-for-information/</guid>
+      <guid>http://hangar.farmradio.fm/post/beep-for-information/</guid>
       <description>&lt;p&gt;Radio is a fantastic tool for reaching millions of listeners with life-changing information. But the cell phone revolution is making this communication tool even more powerful. A cell phone allows listeners to call the radio station and contribute to a program.&lt;/p&gt;
 
 &lt;p&gt;‘Beeping’ also allows callers to contribute and receive information in new ways. ‘Beeping’ has become a new buzzword at The Hangar, our Radio and Innovation Lab located in Arusha, Tanzania.&lt;/p&gt;
