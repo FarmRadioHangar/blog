@@ -1,6 +1,3 @@
 [submodule "public"]
 	path = public
-	url = https://github.com/FarmRadioHangar/FarmradioHangar.github.io.git 
-[submodule "casper"]
-	path = "themes/casper"
-	url = https://github.com/vjeantet/hugo-theme-casper.git 
+	url = git@github.com/FarmRadioHangar/FarmradioHangar.github.io.git 
