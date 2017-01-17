@@ -3,13 +3,12 @@ git config --global user.name "$GIT_NAME"
 git config --global user.email "$GIT_EMAIL"
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
-pwd
+
 # Build the project.
-hugo -t casper -d public
+hugo -t casper
 
 # Go To Public folder
 cd public
-pwd
 
 git status
 
