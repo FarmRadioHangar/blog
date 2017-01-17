@@ -10,6 +10,8 @@ hugo -t casper -d public
 # Go To Public folder
 cd public
 
+git status
+
 # Add changes to git.
 git add -A .
 
@@ -19,6 +21,8 @@ if [ $# -eq 1 ]
   then msg="$1"
 fi
 git commit -m "$msg"
+
+git status
 
 # workaround
 git remote set-url origin https://$GIT_NAME:$GIT_PASSWD@github.com/FarmRadioHangar/FarmradioHangar.github.io.git 
