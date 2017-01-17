@@ -7,6 +7,8 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 # Build the project.
 hugo -t casper
 
+git checkout master
+
 # Add changes to git.
 git add -A .
 
@@ -16,6 +18,8 @@ if [ $# -eq 1 ]
   then msg="$1"
 fi
 git commit -m "$msg"
+
+git remote set-url origin git@github.com:FarmRadioHangar/blog.git
 
 # Push source and build repos.
 git push --force origin master
