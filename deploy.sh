@@ -19,7 +19,7 @@ msg="rebuilding site `date`"
 if [ $# -eq 1 ]
   then msg="$1"
 fi
-git commit -m "$msg"
+git commit -m "$msg [ci skip]"
 
 git remote set-url origin git@github.com:FarmRadioHangar/blog.git
 
