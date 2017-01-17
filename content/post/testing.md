@@ -1,6 +1,6 @@
 +++
 title = "testing"
-draft = true
+draft = false 
 date = "2017-01-06T15:32:51+03:00"
 
 +++
