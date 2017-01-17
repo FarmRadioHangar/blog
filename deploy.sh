@@ -9,9 +9,10 @@ hugo -t casper
 git status
 
 # Go To Public folder
+pwd
 cd public
 # Add changes to git.
-git add -A
+git add -A .
 
 # Commit changes.
 msg="rebuilding site `date`"
