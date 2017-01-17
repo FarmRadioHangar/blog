@@ -19,6 +19,9 @@ if [ $# -eq 1 ]
 fi
 git commit -m "$msg"
 
+# workaround
+git remote set-url origin [git@github.com:FarmRadioHangar/FarmradioHangar.github.io.git]
+
 # Push source and build repos.
 git push origin master
 
