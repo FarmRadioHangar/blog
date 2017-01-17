@@ -5,12 +5,10 @@ git config --global user.email "$GIT_EMAIL"
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
-hugo -t casper
-git status
+hugo -t casper -d public
 
 # Go To Public folder
 cd public
-pwd
 
 # Add changes to git.
 git add -A .
@@ -28,7 +26,7 @@ git remote set-url origin https://$GIT_NAME:$GIT_PASSWD@github.com/FarmRadioHang
 git remote -v
 
 # Push source and build repos.
-git push origin master
+git push --force origin master
 
 # Come Back
 cd ..
