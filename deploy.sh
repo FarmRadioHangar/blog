@@ -7,9 +7,6 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 # Build the project.
 hugo -t casper
 
-git checkout master
-git status
-
 # Add changes to git.
 git add -A .
 
@@ -20,14 +17,6 @@ if [ $# -eq 1 ]
 fi
 git commit -m "$msg"
 
-git status
-
-# workaround
-
-git remote -v
-
 # Push source and build repos.
 git push --force origin master
 
-# Come Back
-cd ..

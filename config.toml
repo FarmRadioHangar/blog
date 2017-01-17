@@ -1,5 +1,5 @@
 languageCode = "en-us"
-BaseUrl= "https://hangar.farmradio.fm/"
+BaseUrl= "http://hangar.farmradio.fm/"
 publishDir = "docs"
 LanguageCode= "en-us"
 Title= "Farm Radio Hangar"
