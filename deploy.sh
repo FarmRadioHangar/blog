@@ -10,6 +10,7 @@ hugo -t casper
 # Go To Public folder
 cd public
 
+git checkout master
 git status
 
 # Add changes to git.
