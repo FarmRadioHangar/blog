@@ -9,8 +9,9 @@ hugo -t casper
 git status
 
 # Go To Public folder
-pwd
 cd public
+pwd
+
 # Add changes to git.
 git add -A .
 
@@ -23,6 +24,8 @@ git commit -m "$msg"
 
 # workaround
 git remote set-url origin https://$GIT_NAME:$GIT_PASSWD@github.com/FarmRadioHangar/FarmradioHangar.github.io.git 
+
+git remote -v
 
 # Push source and build repos.
 git push origin master
