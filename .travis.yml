@@ -5,7 +5,7 @@ go:
 
     global:
         - SSH_KEY="travis_key_2"
-        - GIT_NAME="Bartholomew Sullivan"
+        - GIT_NAME="Brtholomew Sullivan"
         - GIT_EMAIL="sullivan.bart@gmail.com"
 
 before_install:
