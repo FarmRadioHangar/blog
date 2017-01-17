@@ -17,7 +17,6 @@ before_script:
     - go get -u -v github.com/spf13/hugo
 
 script:
-    - cd public
     - ./deploy.sh 
 
 after_success:
