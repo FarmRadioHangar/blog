@@ -17,4 +17,4 @@ script:
     - scripts/deploy.sh 
 
 after_success:
-    - scripts/success.sh 
+    - echo "Hangar blog deployed successfully!" 
