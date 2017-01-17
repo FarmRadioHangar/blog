@@ -2,53 +2,125 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://hangar.farmradio.fm/</loc>
+    <loc>http://hangar.farmradio.fm/post/post-title/</loc>
     <lastmod>2017-01-17T20:47:44+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hangar.farmradio.fm/post/post-title/</loc>
-    <lastmod>2017-01-17T20:47:44+03:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://hangar.farmradio.fm/post/post-title/</loc>
+    <loc>http://hangar.farmradio.fm/post/post-title/</loc>
     <lastmod>2017-01-17T15:14:46+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hangar.farmradio.fm/post/post-title/</loc>
+    <loc>http://hangar.farmradio.fm/post/post-title/</loc>
     <lastmod>2017-01-17T15:04:57+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hangar.farmradio.fm/post/testing/</loc>
+    <loc>http://hangar.farmradio.fm/post/testing/</loc>
     <lastmod>2017-01-06T15:32:51+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hangar.farmradio.fm/post/bart-testing-math-and-code/</loc>
+    <loc>http://hangar.farmradio.fm/post/bart-testing-math-and-code/</loc>
     <lastmod>2017-01-05T12:28:09+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hangar.farmradio.fm/post/hello-mathjax-and-highligh/</loc>
+    <loc>http://hangar.farmradio.fm/post/hello-mathjax-and-highligh/</loc>
     <lastmod>2016-12-16T14:54:24+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hangar.farmradio.fm/post/uliza-connecting-broadcasters-and-farmers/</loc>
+    <loc>http://hangar.farmradio.fm/post/uliza-connecting-broadcasters-and-farmers/</loc>
     <lastmod>2016-09-09T10:54:24+02:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hangar.farmradio.fm/post/mapping-our-impact/</loc>
+    <loc>http://hangar.farmradio.fm/post/mapping-our-impact/</loc>
     <lastmod>2016-02-18T14:58:37+03:00</lastmod>
   </url>
   
   <url>
-    <loc>https://hangar.farmradio.fm/post/beep-for-information/</loc>
+    <loc>http://hangar.farmradio.fm/post/beep-for-information/</loc>
     <lastmod>2016-02-04T15:26:39+03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/tags/beep/</loc>
+    <lastmod>2016-02-04T15:26:39+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/tags/code/</loc>
+    <lastmod>2016-12-16T14:54:24+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/</loc>
+    <lastmod>2017-01-17T20:47:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/tags/farmradio/</loc>
+    <lastmod>2016-09-09T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/tags/innovation/</loc>
+    <lastmod>2016-02-04T15:26:39+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/tags/maps/</loc>
+    <lastmod>2016-02-18T14:58:37+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/tags/math/</loc>
+    <lastmod>2016-12-16T14:54:24+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/post/</loc>
+    <lastmod>2017-01-17T20:47:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/tags/tag1/</loc>
+    <lastmod>2017-01-17T20:47:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/tags/tag2/</loc>
+    <lastmod>2017-01-17T20:47:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/tags/uliza/</loc>
+    <lastmod>2016-09-09T10:54:24+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/tags/video/</loc>
+    <lastmod>2016-09-09T10:54:24+02:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

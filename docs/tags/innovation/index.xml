@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Farm Radio Hangar</title>
-    <link>https://hangar.farmradio.fm/tags/innovation/index.xml</link>
-    <description>Recent content on Farm Radio Hangar</description>
+    <title>Innovation on Farm Radio Hangar</title>
+    <link>http://hangar.farmradio.fm/tags/innovation/index.xml</link>
+    <description>Recent content in Innovation on Farm Radio Hangar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyleft - 2017</copyright>
-    <atom:link href="https://hangar.farmradio.fm/tags/innovation/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://hangar.farmradio.fm/tags/innovation/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Innovations: Beeping for vital information</title>
-      <link>https://hangar.farmradio.fm/post/beep-for-information/</link>
+      <link>http://hangar.farmradio.fm/post/beep-for-information/</link>
       <pubDate>Thu, 04 Feb 2016 15:26:39 +0300</pubDate>
       
-      <guid>https://hangar.farmradio.fm/post/beep-for-information/</guid>
+      <guid>http://hangar.farmradio.fm/post/beep-for-information/</guid>
       <description>&lt;p&gt;Radio is a fantastic tool for reaching millions of listeners with life-changing information. But the cell phone revolution is making this communication tool even more powerful. A cell phone allows listeners to call the radio station and contribute to a program.&lt;/p&gt;
 
 &lt;p&gt;‘Beeping’ also allows callers to contribute and receive information in new ways. ‘Beeping’ has become a new buzzword at The Hangar, our Radio and Innovation Lab located in Arusha, Tanzania.&lt;/p&gt;
