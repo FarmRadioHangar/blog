@@ -45,7 +45,7 @@
 </pre>
 
 1. `git pull master` in order to always work with latest version
-2. `cp examples/sample-post.md content/post/your-new-post-name.md
+2. `cp examples/sample-post.md content/post/your-new-post-name.md`
 3. Work on your post
 4. save a header image in statis/images/2017 and it will be included in your post if it is set in the frontmatter
 5. While the frontmatter variable says draft=true the post will not appear on front page but be available at http://hangar.farmradio.fm/post/your-new-post/ until you change draft=false
