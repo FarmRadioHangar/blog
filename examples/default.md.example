@@ -1,5 +1,5 @@
 +++
-image = ""
+image = "images/2017/placeholder.png"   /* Header images should be stored in static/images/2017/ */
 comments = true
 share = true
 author = "" /* geofrey, johannes, damjan, bart, kassim, farmradio */
