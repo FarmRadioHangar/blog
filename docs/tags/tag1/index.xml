@@ -19,18 +19,5 @@
 </description>
     </item>
     
-    <item>
-      <title>helloman</title>
-      <link>http://hangar.farmradio.fm/post/post-title/</link>
-      <pubDate>Tue, 17 Jan 2017 15:04:57 +0300</pubDate>
-      
-      <guid>http://hangar.farmradio.fm/post/post-title/</guid>
-      <description>&lt;p&gt;here we go again
-and again&lt;/p&gt;
-
-&lt;p&gt;and one more time&lt;/p&gt;
-</description>
-    </item>
-    
   </channel>
 </rss>
