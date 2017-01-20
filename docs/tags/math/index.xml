@@ -45,6 +45,21 @@ clean:
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;And that is that!&lt;/p&gt;
+
+&lt;p&gt;or lets at least add some kind of image
+
+&lt;figure &gt;
+    
+        &lt;img src=&#34;http://hangar.farmradio.fm/images/2017/Pyramid_Blaster.png&#34; /&gt;
+    
+    
+    &lt;figcaption&gt;
+        &lt;h4&gt;Ghetto Illuminati&lt;/h4&gt;
+        
+    &lt;/figcaption&gt;
+    
+&lt;/figure&gt;
+&lt;/p&gt;
 </description>
     </item>
     
