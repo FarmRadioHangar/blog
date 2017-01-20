@@ -5,7 +5,7 @@ git config --global user.email "$GIT_EMAIL"
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
 # Build the project.
-hugo -t casper
+hugo -t casper -D
 
 chmod 600 ~/.ssh/id_rsa
 

@@ -80,11 +80,12 @@
 <main id="content" class="content" role="main">
 
     {{ range .Data.Pages }}
-        {{if eq .Type "index" }}
-        <div class="index-content post">
-        {{.Content}}
-        </div>
-        {{end}}
+            {{if eq .Type "index" }}
+                <div class="index-content post">
+                isdraft={{.Draft}}
+                {{.Content}}
+                </div>
+            {{end}}
     {{ end }}
 
     {{ if not ($.Scratch.Get "paginatedSections") }}
@@ -104,7 +105,9 @@
     </div>
 
     {{ range $index, $page := $paginator.Pages }}
-        {{ partial "li.html" . }}
+        {{ if not .Draft  }}  
+            {{ partial "li.html" . }}
+        {{ end }}
     {{ end }}
 
     {{ partial "pagination.html" $paginator }}

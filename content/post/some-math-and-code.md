@@ -2,7 +2,7 @@
 author = "bart"
 comments = true
 date = "2016-12-16T14:54:24+03:00"
-draft = false
+draft = true 
 image = "images/2016/Dec/mathjax.png"
 share = true
 slug = "hello-mathjax-and-highligh"
