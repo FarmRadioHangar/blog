@@ -1,0 +1,18 @@
++++
+image = ""
+comments = true
+share = true
+author = "" /* geofrey, johannes, damjan, bart, kassim, farmradio */
+tags = [
+  "tag1",
+  "tag2",
+]
+menu = ""
+date = "2017-01-31T20:47:44+03:00"
+title = "post-title"
+draft = true
+slug = "post-title"
+
++++
+your blog post here
+
