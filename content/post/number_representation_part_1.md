@@ -572,4 +572,4 @@ $, as the following test will confirm:
 and [(atoi b . itoa b) n == n | n <- [0..100], b <- [2..16]]
 ```
 
-In the next part of this series, we will take a more detailed look at integer representation in the binary numeral system.
+In the next part of this series, we will have a closer look at integer representation in the binary numeral system.
