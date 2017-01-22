@@ -15,7 +15,7 @@ In this series of posts, we will look at the different ways that numbers are sto
 
 Although we sometimes use the two terms interchangeably, numbers and numerals are different things. A *numeral* is a symbolic representation of a number.  Numbers are abstract concepts, and numerals are the names and symbols that denote them. *Numeral systems* (also called number systems) are formal methods and notation for expressing numbers in concrete form &mdash; that is, as numerals.  
 
-<img src="images/2017/01/heh.png" alt="Heh" style="width:260px;"><center style="margin-top:-20px;"><small><i>In the ancient Egyptian hieroglyphic numeral system, the god <a href="https://en.wikipedia.org/wiki/Heh_(god)">Heh</a> symbolized one million.</i></small></center>
+<img src="/images/2017/01/heh.png" alt="Heh" style="width:260px;"><center style="margin-top:-20px;"><small><i>In the ancient Egyptian hieroglyphic numeral system, the god <a href="https://en.wikipedia.org/wiki/Heh_(god)">Heh</a> symbolized one million.</i></small></center>
 
 ### Positional numeral systems
 
@@ -24,3 +24,23 @@ In our ordinary decimal system, known as the *Hindu-Arabic* notation, we write n
 $$ 
 5 \cdot 10^4 + 1 \cdot 10^3 + 3 \cdot 10^2 + 0 \cdot 10^1 + 4 \cdot 10^0 = 51 304
 $$
+
+Numeral systems of this kind are called *positional*. Each digit is assigned a weight, based on its position in the sequence. Another property, shared by all the numeral systems we will consider here, is that they have a *uniform* base, i.e., the same base is used in all positions of the string. Let $d\_q \dots d\_2 d\_1 d\_0$ denote an arbitrary natural number $n$. In other words, $d\_i$ is the digit at position $i$ in the decimal string representation of $n$. Then 
+
+$$ 
+n = d\_q 10^q + \cdots + d\_2 10^2 + d\_1 10^1 + d\_0. 
+$$ 
+
+More generally, for any radix $b$ we can find coefficients $a\_0, a\_1, \dots, a\_q$, such that
+
+$$
+n = a\_q b^q + \cdots + a\_2 b^2 + a\_1 b^1 + a\_0 \text{ where } 0 \le a\_i < b \text{ for all $ i $, and $ a\_q \ne 0 $}.
+$$
+
+The length of this sequence is $q + 1$, for some integer $q \ge 0$.  To express $q$ in terms of $n$, first consider the real number $x$ such that $b^x = n.$ Then $x = \log\_b n,$ and $q$ is the largest integer less than or equal to $x$. This mapping is known as the *floor* function and we write $q = \lfloor\log_b n\rfloor$. Then, if 
+
+$$
+n = \\!\\!\\! \sum\_{i=0}^{\lfloor\log\_b n\rfloor} \\!\\!\\! a\_i b^i \; (0 \le a\_i < b)
+$$
+
+there is exactly one way in which we can choose these coefficients. 
