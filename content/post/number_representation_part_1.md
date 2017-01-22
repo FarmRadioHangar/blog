@@ -1,7 +1,5 @@
 +++
-date     = "2017-01-22T13:37:00+02:00"
-draft    = true
-title    = "Number representation in digital electronics -- Part 1 (Numerical bases)"
+date     = "2017-01-22T13:37:00+02:00" draft    = true title    = "Number representation in digital electronics -- Part 1 (Numerical bases)"
 slug     = "number-representation-in-digital-electronics-part-i"
 tags     = ["number", "basis", "representation", "numeral", "binary", "decimal"]
 image    = ""
@@ -17,7 +15,7 @@ In this series of posts, we will look at the different ways that numbers are sto
 
 Although we sometimes use the two terms interchangeably, numbers and numerals are different things. A *numeral* is a symbolic representation of a number.  Numbers are abstract concepts, and numerals are the names and symbols that denote them. *Numeral systems* (also called number systems) are formal methods and notation for expressing numbers in concrete form &mdash; that is, as numerals.  
 
-[[[IMAGE]]]
+<img src="/images/2017/01/heh-1.png" alt="Heh" style="width:260px;"><center style="margin-top:-20px;"><small><i>In the ancient Egyptian hieroglyphic numeral system, the god <a href="https://en.wikipedia.org/wiki/Heh_(god)">Heh</a> symbolized one million.</i></small></center>
 
 ### Positional numeral systems
 
