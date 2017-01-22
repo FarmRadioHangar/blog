@@ -227,6 +227,540 @@ $$</p>
 
 <p>there is exactly one way in which we can choose these coefficients.</p>
 
+<h3 id="counting-the-digits">Counting the digits</h3>
+
+<p>In a program implementation &mdash; even though we could use the logarithm directly to find the number of characters needed to represent a number &mdash; a common approach is to simply divide the number by the radix, in a loop, until the quotient becomes zero. For example, in C:</p>
+
+<pre><code>int num_digits (int n) {
+    int i = 1;
+    while ((n /= 10))
+        ++i;
+    return i;
+}
+</code></pre>
+
+<p>Note that this works for any base &mdash; not only ten. Simply add a second parameter for the base, e.g., <code>(int n, int base)</code> and change the while statement to <code>while ((n /= base))</code>. To also count the sign character for negative numbers, change the first line to <code>int i = (n &lt; 0) ? 2 : 1;</code>.</p>
+
+<h3 id="the-basis-representation-theorem">The basis representation theorem</h3>
+
+<p>The fact that every natural number is uniquely identified in the way we have just described, is established by a result in number theory known as the <em>basis representation theorem</em>. To prove this theorem, we first need the following lemma.</p>
+
+<p><em>Lemma 1.</em> The sum of a geometric series with $n - 1$ terms, common ratio $r$, and initial value one is $(r^n - 1)(r - 1)^{-1}$. In symbols;</p>
+
+<p>$$
+\forall r \in \mathbb{R} \; (r \ne 1), n \in \mathbb{N} : (r - 1)(1 + r + r^2 + \dots + r^{n - 1}) = r^n - 1.
+$$</p>
+
+<p><em>Proof.</em> Let $S_n = 1 + r + r^2 + \dots + r^{n - 1}$. Multiply by $r$ on both sides, so that</p>
+
+<p>$$
+  \begin{align}
+    rS_n &amp;= r(1 + r + r^2 + \dots + r^{n - 1}) \<br />
+         &amp;= r + r^2 + \dots + r^n.
+  \end{align}
+$$</p>
+
+<p>Then, $rS_n - S_n = S_n(r - 1) = (r + r^2 + \dots + r^n) - (1 + r + r^2 + \dots + r^{n - 1})$ and $S_n = \frac{r^n - 1}{r - 1}$. We will now state the basis representation theorem in more formal terms.</p>
+
+<p><em>Theorem.</em> Given a base $b$, where $b$ is any integer greater than one, and a natural number $n$, there exist integers $d_0, d_1, \dots, d_q \; (0 \le d_i &lt; b)$
+such that $n = d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + d_0$ and $d_q \ne 0$. We call this the representation of $n$ in base $b$. Furthermore, this representation is unique.</p>
+
+<p><em>Proof.</em> The proof has two parts. We first have to show that a representation exists for every $n$, and subsequently that any such representation is unique.</p>
+
+<h4 id="proof-of-existence">Proof of existence</h4>
+
+<p>The argument is by induction on $n$ and the statement we would like to prove is the following:</p>
+
+<p>$$
+P(n) \equiv \forall b \in \mathbb{Z} \; (b &gt; 1), \exists q \in \mathbb{Z} \; (q \ge 0), d_0, d_1, \dots, d_q \in \mathbb{Z} \; (0 \le d_i &lt; b) \; \text{s.t.} \\ n = d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + d_0 \; \text{and where} \; d_q \ne 0.
+$$</p>
+
+<p><em>Base case:</em> For $n = 1$, set $q = 0$ and $d_0 = n = 1$. Then, $P(1)$ holds.</p>
+
+<p><em>Induction hypothesis:</em> Assume $P(k)$ to be true.</p>
+
+<p><em>Inductive step:</em> We consider two cases.</p>
+
+<ul>
+<li>There exists at least one index $i$ for which $d_i &lt; b - 1$. Let $j$ be the smallest such index. If $j = 0$, then $d_0 + 1 \le b - 1$ and therefore $d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + (d_0 + 1)$ is a valid representation of $k + 1$. Otherwise, if $j &gt; 0$, then</li>
+</ul>
+
+<p>$$
+    \begin{align}
+      k &amp;= d_q b^q + \cdots + d_j b^j + (b - 1)b^{j - 1} + \cdots + (b - 1)b^2 + (b - 1)b + (b - 1) \<br />
+        &amp;= d_q b^q + \cdots + d_j b^j + (b - 1)(1 + b + b^2 + \cdots + b^{j - 1})
+    \end{align}
+  $$</p>
+
+<p>Then, by Lemma 1:</p>
+
+<p>$$
+    \begin{align}
+                   k &amp;= d_q b^q + \cdots + d_j b^j + b^j - 1 \<br />
+      \implies k + 1 &amp;= d_q b^q + \cdots + d_j b^j + b^j \<br />
+                     &amp;= d_q b^q + \cdots + (d_j + 1) b^j
+    \end{align}
+  $$</p>
+
+<p>Now, since we know that $d_j + 1 \le b - 1$, this is also a valid representation of $k + 1$.</p>
+
+<ul>
+<li>In this case, $d_i = b - 1$ for all $i$. Then</li>
+</ul>
+
+<p>$$
+    k = (b - 1)(1 + b + b^2 + \cdots + b^q).
+  $$</p>
+
+<p>Once again, applying Lemma 1 tells us that</p>
+
+<p>$$
+    \begin{align}
+                   k &amp;= b^{q + 1} - 1 \<br />
+      \implies k + 1 &amp;= b^{q + 1}
+    \end{align}
+  $$</p>
+
+<p>and we have the representation we need.</p>
+
+<p>Since these cases are exhaustive, we find that $P(k) \implies P(k + 1)$, which proves existence for all $n \ge 1$. Note that it is also possible to represent $0$ in any base, as itself.</p>
+
+<h4 id="proof-of-uniqueness">Proof of uniqueness</h4>
+
+<p>To prove that $d_q \dots d_2 d_1 d_0$ is a unique representation of $n$ in base $b$, we will assume that there are two different representations of $n$, so that</p>
+
+<p>$$
+  \begin{align}
+    n &amp;= c_q b^q + \cdots + c_2 b^2 + c_1 b^1 + c_0 \<br />
+      &amp;= d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + d_0
+  \end{align}
+$$</p>
+
+<p>and then try to derive a contradiction from this.</p>
+
+<p>If the above two representations differ, then there must be some smallest index $j$ for which $c_j \ne d_j$. We may then choose $c_0, d_0, c_1, d_1, \dots$ in such a way that $c_j &gt; d_j$. In order for these two representations to denote the same number $n$, the difference of the two sums must be zero. We can therefore let</p>
+
+<p>$$\delta = \sum_{i = j + 1}^q (c_i - d_i)b^i,$$</p>
+
+<p>and write $0 = \delta + (c_j - d_j)b^j = \displaystyle\frac{\delta}{b^j} + c_j - d_j = \!\!\! \sum_{i = j + 1}^q (c_i - d_i)b^{i - j} + c_j - d_j.$</p>
+
+<p>Then, since each term in $\dfrac{\delta}{b^j}$ is a factor of $b$, we find that</p>
+
+<p>$$
+0 = \frac{\delta}{b^j} + c_j - d_j \equiv c_j - d_j \; (\!\!\bmod b).
+$$</p>
+
+<p>That is, $c_j - d_j \in \{ zb \;|\; z \in \mathbb{Z} \}$. But since $0 \le c_j, d_j &lt; b$, it must be that $c_j - d_j = 0$, which contradicts our initial assumption that $c_j \ne d_j$. This concludes the proof. $$\tag*{$\blacksquare$}$$</p>
+
+<h3 id="string-to-integer-conversion">String-to-integer conversion</h3>
+
+<p>To perform this type of conversion from the string representation of an integer, in C, we can use the <code>atoi</code>, <code>strtol</code>, and <code>strtoll</code> functions from the <code>stdlib.h</code> header, where the latter two also support bases other than 10. The following example shows a simple implementation. Note that, unlike the standard C functions, we do <em>not</em> take negative numbers into account here.</p>
+
+<pre><code>#include &lt;stdint.h&gt;
+
+uint32_t stoi (const char *str, int radix)
+{
+    char d;
+    uint32_t s = 0;
+
+    if (radix &lt; 2 || radix &gt; 16) 
+        return s;
+
+    while ((d = *str))
+    {
+        ++str;
+        if (d &gt;= '0' &amp;&amp; d &lt;= '9') {
+            d -= '0';
+        } else if (d &gt;= 'A' &amp;&amp; d &lt;= 'F') {
+            d -= 'A' - 10;
+        } else if (d &gt;= 'a' &amp;&amp; d &lt;= 'f') {
+            d -= 'a' - 10;
+        } else {
+            continue;
+        }
+        if (radix &gt; d) {
+            s = s * radix + d; 
+        }
+    }
+
+    return s;
+}
+</code></pre>
+
+<p>Starting from a string $d_q d_{q-1} d_{q-2} \dots d_0 $ in base $b$, we compute successive values of $s$ as follows:</p>
+
+<p>$$
+  \begin{align}
+    s_0 &amp;= d_q \<br />
+    s_1 &amp;= b s_0 + d_{q-1} = d_q b + d_{q-1} \<br />
+    s_2 &amp;= b s_1 + d_{q-2} = b(d_q b + d_{q-1}) + d_{q-2} \<br />
+    s_3 &amp;= b s_2 + d_{q-3} = b(b(d_q b + d_{q-1}) + d_{q-2}) + d_{q-3} \<br />
+  \end{align}
+$$</p>
+
+<p>&hellip;and so on. We are using an instance of a more general technique, known as <a href="https://en.wikipedia.org/wiki/Horner's_method">Horner’s rule</a>, to save a few multiplications here. This is repeated until</p>
+
+<p>$$
+  \begin{align}
+    s_q &amp;=b( \cdots (b(d_q b + d_{q-1}) + d_{q-2}) \cdots) + d_0 \<br />
+         &amp;=b( \cdots (b(d_q b^2 + d_{q-1} b + d_{q-2}) + d_{q-3}) \cdots) + d_0 \<br />
+         &amp;=b( \cdots (b(d_q b^3 + d_{q-1} b^2 +  d_{q-2} b + d_{q-3}) \cdots) + d_0 \<br />
+         &amp; \quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \<br />
+         &amp;=d_q b^q + d_{q-1} b^{q-1} + \cdots + d_1 b + d_0. \<br />
+  \end{align}
+$$</p>
+
+<p>This implementation in Haskell follows the same approach. The fold higher-order function lends itself very naturally to this type of problem.</p>
+
+<pre><code>import Data.Char ( digitToInt )  
+import qualified Data.Text as T
+
+type Base = Int
+
+atoi :: Base -&gt; T.Text -&gt; Int
+atoi base   
+  | base &lt; 2 || base &gt; 16 = error &quot;Illegal base&quot;
+  | otherwise = T.foldl' f 0  
+  where
+    f t digit = t * base + digitToInt digit 
+</code></pre>
+
+<p>(Haskell’s <a href="https://hackage.haskell.org/package/text"><code>Text</code></a> package is used here for efficient string handling.)</p>
+
+<h3 id="integer-to-string-conversion">Integer-to-string conversion</h3>
+
+<p>In the opposite direction &mdash; to convert an integer to a string in some arbitrary base, we use an algorithm similar to the counting procedure described earlier. In this case, however, we need to pay attention to the remainder at each step, and write these values as characters to a buffer.</p>
+
+<p>Notice that we are just working with Euclidian division here, and the <a href="http://www.ask-math.com/euclids-division-lemma.html">division lemma</a>, which says that for any pair of positive integers $n$ and $m$, we can find integers $q$ and $r$, such that $0 \le r &lt; m$ and $n = qm + r$. The proof can be derived from the basis representation theorem.</p>
+
+<p>When $m = 1$ (which it isn’t here &mdash; we include this case just for the sake of completeness), then $r$ must be $0$ and therefore $q = n$. Otherwise, $m$ is greater than one and we may consider $m$ as a base. We then know that $n$ has a representation $a_0, a_1, \dots, a_s$ in this base. Now, let</p>
+
+<p>$$
+  \begin{align}
+q &amp;= a_sm^{s-1} + a_{s-1}m^{s-2} + \cdots + a_2m + a_1, \text{ and } \<br />
+r &amp;= a_0
+  \end{align}
+$$</p>
+
+<p>where $0 \le a_0 &lt; m$. This means that</p>
+
+<p>$$
+  \begin{align}
+n &amp;= a_sm^s + a_{s-1}m^{s-1} + \cdots + a_2m^2 + a_1m + a_0 \<br />
+  &amp;= (\underbrace{a_sm^{s-1} + a_{s-1}m^{s-2} + \cdots + a_2m + a_1}_{q})m + r. \<br />
+  \end{align}
+$$</p>
+
+<!--
+Now, given a pair of integers $q′$ and $r′$, such that $n = q′m + r′$, there exists a representation $q′ = b\_tm^t + b\_{t-1}m^{t-1} + \cdots + b\_2m^2 + b\_1m + b\_0$, so that
+
+$$
+\begin{align}
+  n &= (\overbrace{b\_tm^t + b\_{t-1}m^{t-1} + \cdots + b\_2m^2 + b\_1m + b\_0}^{q′})m + r′ \\\
+    &= b\_tm^{t+1} + b\_{t-1}m^t + \cdots + b\_2m^3 + b\_1m^2 + b\_0m + r′ \\\
+\end{align}
+$$
+
+and by comparing these two representations, coefficient by coefficient, it is evident that $q′ = \sum\_{i=0}^t b\_im^i = \sum\_{j=1}^{s} a\_jm^{j-1} = q$ and $r′ = a\_0 = r$. 
+-->
+
+<h4 id="algorithm">Algorithm</h4>
+
+<p>Let $m$ be our target base, and $n$ the number to translate. Using the division lemma, the process looks something like the following.</p>
+
+<p>$$
+  \begin{align}
+    n &amp;= q_0m + r_0, &amp;&amp; 0 \le r_0 &lt; m, \<br />
+    q_0 &amp;= q_1m + r_1, &amp;&amp; 0 \le r_1 &lt; m, \<br />
+    q_1 &amp;= q_2m + r_2, &amp;&amp; 0 \le r_2 &lt; m, \<br />
+    q_2 &amp;= \dots
+  \end{align}
+$$</p>
+
+<p>Since $q_k = \frac{q_{k-1}-r_k}{m} \wedge r_k \ge 0 \wedge m &gt; 1 \implies |q_k| &lt; |q_{k-1}|$, we may continue this until we reach $p = \lfloor \log_m n \rfloor$, so that $q_p = 0$. The pattern here is the same as when we implemented the Horner scheme;</p>
+
+<p>$$
+  \begin{align}
+     n &amp;= q_0m + r_0 \<br />
+       &amp;= (q_1m + r_1)m + r_0 \<br />
+       &amp;= ((q_2m + r_2)m + r_1)m + r_0 \<br />
+       &amp; \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \<br />
+       &amp;= (( \cdots (q_{p-1}m + r_{p-1})m + \cdots + r_2)m + r_1)m + r_0 \<br />
+       &amp;= (( \cdots ((q_pm + r_p)m + r_{p-1})m + \cdots + r_2)m + r_1)m + r_0 \<br />
+       &amp;= (( \cdots (r_pm + r_{p-1})m + \cdots + r_2)m + r_1)m + r_0 \<br />
+       &amp;= (( \cdots (r_pm^2 + r_{p-1}m + r_{p-2})m + \cdots + r_2)m + r_1)m + r_0 \<br />
+       &amp;= (( \cdots (r_pm^3 + r_{p-1}m^2 + r_{p-2}m + r_{p-3})m + \cdots + r_2)m + r_1)m + r_0 \<br />
+       &amp; \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \<br />
+       &amp;= r_pm^p + r_{p-1}m^{p-1} + \cdots + r_2m^2 + r_1m + r_0
+  \end{align}
+$$</p>
+
+<p>&hellip;which shows that the base $m$ representation of $n$ is indeed $r_p r_{p-1} \dots r_0$.</p>
+
+<p><img src="http://hangar.farmradio.fm/content/images/2017/01/euclid.jpg" alt="" /></p>
+
+<p>As an example, here we show the steps for converting the decimal number 2,958,409,950 to base 16. In a program implementation, we typically need to reverse the result for the digits to appear in the order we expect.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dividend</th>
+      <th>Quotient</th>
+      <th>Remainder</th>
+      <th>Digit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2958409950</td>
+      <td>184900621</td>
+      <td>14</td>
+      <td>E</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>184900621</td>
+      <td>11556288</td>
+      <td>13</td>
+      <td>D</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>11556288</td>
+      <td>722268</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>722268</td>
+      <td>45141</td>
+      <td>12</td>
+      <td>C</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>45141</td>
+      <td>2821</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>2821</td>
+      <td>176</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>176</td>
+      <td>11</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+  <tbody>
+    <tr>
+      <td>11</td>
+      <td>0</td>
+      <td>11</td>
+      <td>B</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>The non-standard <code>itoa</code> (integer-to-ascii) function in C performs this type of conversion. However, since <code>itoa</code> is not available on all systems, a portable alternative is the <code>sprintf</code> family of functions.</p>
+
+<pre><code>#include &lt;stdio.h&gt;
+
+int main (void)
+{
+    unsigned int a = 2958409950;
+    char str[9];
+
+    sprintf (str, &quot;%x&quot;, a);
+    printf (&quot;%u = 0x%s\n&quot;, a, str);
+
+    return 0;
+}
+</code></pre>
+
+<p>Unfortunately, with this solution, you are limited to conversions between bases 8, 10 and 16. An implementation in ANSI C that handles all bases from 2 to 16 is shown here.</p>
+
+<pre><code>char *itoa (int val, char *buf, int radix)
+{
+    static const char *digits = &quot;0123456789abcdef&quot;;
+
+    int i = 0, 
+        j = 0;
+
+    if (radix &lt; 2 || radix &gt; 16) {
+        /* Return empty string if radix is invalid. */
+        *buf = 0;
+        return buf;
+    }
+
+    do {
+        buf[j++] = alphabet [val % radix];
+        val /= radix;
+    } 
+    while (val);
+
+    buf[j--] = 0;
+
+    while (i &lt; j)
+    {
+        const char tmp = buf[i];
+        buf[i++] = buf[j];
+        buf[j--] = tmp;
+    }
+
+    return buf;
+}
+</code></pre>
+
+<p>At the processor level, integer division instructions, like <code>div</code> on x86 ISAs, compute both quotient and remainder at the same time. Some high-level languages and programming libraries take advantage of this. In Haskell, for example, the <code>quotRem</code> function from the <a href="https://hackage.haskell.org/package/base/docs/Prelude.html">Prelude</a> compiles down to the <code>div</code> machine instruction on these targets.</p>
+
+<p>Looking at the C code again, it appears as if we are performing extra work, in this sense, and it may be tempting to replace the modulus computation and subsequent division with some piece of optimization that directly utilizes hardware integer division. In reality, there is no performance benefit to be gained by doing so, in a case like this. In fact, it will most likely have the opposite effect, since compilers are smart and transform divisions by constants into more efficient bitwise shift operations (more about these in coming posts), at a sufficiently high optimization level.</p>
+
+<p>It is not easy to beat the code generated by optimizing compilers, like gcc and LLVM. Purely as an exercise in code golf, the following handwritten assembly code &mdash; which converts an integer to a hexadecimal (base 16) string &mdash; is trying to squeeze out a few more clock cycles, by avoiding expensive <code>div</code> instructions. The code is written in the NASM syntax, which means that the first operand is the destination, and the second is the source. This is 64-bit assembly for the AMD64 ABI, so the two arguments are passed in registers <code>RDI</code> and <code>RSI</code>. The return value is given in <code>RAX</code>.</p>
+
+<pre><code>; hex_str.asm 
+
+    section .data
+
+digits: 
+    db &quot;0123456789abcdef&quot;
+
+    section .text
+
+    global hex_str
+
+hex_str:
+    mov      rax, rdi              ; 1st arg: input value
+    mov      rdi, rsi              ; 2nd arg: string buffer
+
+    lea      esi, [digits]         ; Pointer to character set
+
+    push     rdi                   ; Save for later use
+
+loop:
+    mov      edx, eax
+    and      edx, 0b1111           ; Get the remainder
+    shr      eax, 4                ; Divide value by 2^4
+
+    mov      dl, [esi + edx]       ; Get digit matching the remainder
+    mov      [rdi], dl             ; Write digit to character buffer
+    inc      rdi                   ; Increment pointer
+
+    test     eax, eax              ; Check if quotient is zero
+    jne      loop                  ; If not, repeat again
+
+    mov BYTE [rdi], 0x00           ; Add null terminator
+
+    mov      rsi, [rsp]            ; Recover pointer to buffer
+
+reverse:                           ; Reverse the string by moving the two 
+    dec      rdi                   ; pointers towards the middle until they
+    mov      ah, [rdi]             ; meet, swapping the pointees at each step
+    mov      al, [rsi]             ; 
+    mov      [rdi], al             ; |--&gt;    
+    mov      [rsi], ah             ; 8ab3387f 
+    inc      rsi                   ;     &lt;--|
+
+    cmp      rsi, rdi
+    jl       reverse
+
+exit:
+    pop      rax                   ; Return the buffer address
+
+    ret
+</code></pre>
+
+<pre><code>/* main.c */
+#include &lt;stdio.h&gt;
+
+char *hex_str (int, char *);
+
+int main (void)
+{
+    char str[9];
+
+    printf (&quot;0x%s\n&quot;, hex_str (0xfeedbaba, str));
+    return 0;
+}
+</code></pre>
+
+<p>On my system, I compile, link and run this code with the following commands.</p>
+
+<pre><code>nasm hex_str.asm -f elf64
+gcc main.c hex_str.o -o main
+./main
+</code></pre>
+
+<p>As a side note, how do we implement division if we are only allowed to use addition and subtraction? Although very inefficient, the straightforward way is to assign the dividend to a variable, say $n$, and repeatedly subtract the divisor, which we will call $d$, from $n, n - d, n - 2d, \dots $ until the result is less than $d$.</p>
+
+<p>$$
+  \begin{align}
+  n′      &amp;= n - d \<br />
+  n′′     &amp;= n′ - d \<br />
+  n^{(3)} &amp;= n′′ - d \<br />
+  \end{align}
+$$</p>
+
+<p>If this takes $q$ steps, then $q$ is the quotient, and the value of $n^{(q)}$ is the remainder. Clearly, the running time of this algorithm is linear in the size of $q$, which is not so great. Later, we will look at more efficient methods, involving already mentioned bit shifts.</p>
+
+<pre><code>/**
+ * Slow division algorithm
+ */
+int quot_rem (int n, int d, int *rem)
+{
+    int q = 0;
+
+    while (n &gt;= d) {
+        n = n - d;
+        ++q;
+    }
+    if (rem) { *rem = n; }
+
+    return q;
+}
+</code></pre>
+
+<p>Finally we look at a simple <code>itoa</code> implementation in Haskell. The following function builds a <code>Text</code> representation of the input value, by <em>unfolding</em> it &mdash; a higher-order pattern more generally known as an <a href="https://en.wikipedia.org/wiki/Anamorphism">anamorphism</a>. It is the dual operation of the fold (<a href="https://en.wikipedia.org/wiki/Catamorphism">catamorphism</a>) we used in <code>atoi</code>.</p>
+
+<pre><code>import Data.Char ( intToDigit )
+import qualified Data.Text as T
+
+type Base = Int
+
+itoa :: Base -&gt; Int -&gt; T.Text
+itoa base n  
+  | base &lt; 2 || base &gt; 16 = error &quot;Illegal base&quot;
+  | 0 == n    = T.pack &quot;0&quot;
+  | otherwise = T.reverse $ T.unfoldr gen n
+  where 
+    gen a = case quotRem a base of
+      (0, 0) -&gt; Nothing
+      (q, r) -&gt; Just (intToDigit r, q)
+</code></pre>
+
+<p>These two functions form each others inverses, when applied to the same base. That is $
+  \forall b,\; 2 \le b \le 16 : \text{atoi }b \circ \text{itoa }b \equiv id
+$, as the following test will confirm:</p>
+
+<pre><code>and [(atoi b . itoa b) n == n | n &lt;- [0..100], b &lt;- [2..16]]
+</code></pre>
+
+<p>In the next part of this series, we will take a more detailed look at integer representation in the binary numeral system.</p>
+
     </section>
 
 
