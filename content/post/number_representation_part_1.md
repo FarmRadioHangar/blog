@@ -1,7 +1,7 @@
 +++
 date     = "2017-01-22T13:37:00+02:00" 
 draft    = false
-title    = "Number representation in digital electronics -- Part 1 (Numerical bases)"
+title    = "Number representation in digital electronics — Part 1 (Numerical bases)"
 slug     = "number-representation-in-digital-electronics-part-i"
 tags     = ["number", "basis", "representation", "numeral", "binary", "decimal"]
 image    = "/images/2017/01/screen.jpg"
