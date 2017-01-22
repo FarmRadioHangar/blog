@@ -124,20 +124,20 @@ $$
 
 * In this case, $d\_i = b - 1$ for all $i$. Then
 
-  $$
-    k = (b - 1)(1 + b + b^2 + \cdots + b^q).
-  $$
-
-  Once again, applying Lemma 1 tells us that
-
-  $$
-    \begin{align}
-                   k &= b^{q + 1} - 1 \\\\\
-      \implies k + 1 &= b^{q + 1} 
-    \end{align}
-  $$
-
-  and we have the representation we need. 
+    $$
+      k = (b - 1)(1 + b + b^2 + \cdots + b^q).
+    $$
+  
+    Once again, applying Lemma 1 tells us that
+  
+    $$
+      \begin{align}
+                     k &= b^{q + 1} - 1 \\\\\
+        \implies k + 1 &= b^{q + 1} 
+      \end{align}
+    $$
+  
+    and we have the representation we need. 
   
 Since these cases are exhaustive, we find that $P(k) \implies P(k + 1)$, which proves existence for all $n \ge 1$. Note that it is also possible to represent $0$ in any base, as itself.
 
