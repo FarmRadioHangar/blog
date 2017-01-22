@@ -63,7 +63,7 @@ Note that this works for any base &mdash; not only ten. Simply add a second para
 
 The fact that every natural number is uniquely identified in the way we have just described, is established by a result in number theory known as the *basis representation theorem*. To prove this theorem, we first need the following lemma.
 
-*Lemma 1.* The sum of a geometric series with $n - 1$ terms, common ratio $r$, and initial value one is $(r^n - 1)(r - 1)^{-1}$. In symbols;
+*Lemma 1.* The sum of a geometric series with $n - 1$ terms, common ratio $r$, and initial value $1$ is $(r^n - 1)(r - 1)^{-1}$. In symbols;
 
 $$ 
 \forall r \in \mathbb{R} \; (r \ne 1), n \in \mathbb{N} : (r - 1)(1 + r + r^2 + \dots + r^{n - 1}) = r^n - 1.
