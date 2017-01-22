@@ -15,7 +15,7 @@
 
 
 <meta name="twitter:title" content="Number representation in digital electronics -- Part 1 (Numerical bases)"/>
-<meta name="twitter:description" content="In this series of posts, we will look at the different ways that numbers are stored and processed in computers and other electronic devices, as well as some details of the specific data formats used to represent numeric values in computer memory. An important part of this is the binary numeral system, since we usually think of digital data as being in binary form. The binary and decimal systems both use a position-value notation, and this first post will focus on some of the common characteristics of this type of system, and how they allow numbers to be expressed in different bases."/>
+<meta name="twitter:description" content="In this series of posts, we will look at the different ways that numbers are stored and processed in computers and other electronic devices, as well as some details of the specific data formats used to represent numeric values in computer memory. An important part of this is the binary numeral system, since we usually think of digital data as being in binary form. The binary and decimal systems both use a position-value notation, and this first post will focus on some of the common characteristics of this type of system, and how this allows numbers to be expressed in different bases."/>
 
     <meta name="twitter:site" content="@FRIHangar"/>
 
@@ -68,15 +68,17 @@
     <script>hljs.initHighlightingOnLoad();</script>
 
     
-    <script type="text/javascript"
-            src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
     
 
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         jax: ["input/TeX", "output/SVG"],
-        tex2jax: {inlineMath: [['$$', '$$']],displayMath : [['$$$$','$$$$']]},
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          displayMath: [['$$','$$'], ['\[','\]']]
+        },
         CommonHTML: {
           scale: 92
         }
@@ -189,7 +191,7 @@
     <section class="post-content">
       
 
-<p>In this series of posts, we will look at the different ways that numbers are stored and processed in computers and other electronic devices, as well as some details of the specific data formats used to represent numeric values in computer memory. An important part of this is the binary numeral system, since we usually think of digital data as being in binary form. The binary and decimal systems both use a position-value notation, and this first post will focus on some of the common characteristics of this type of system, and how they allow numbers to be expressed in different bases.</p>
+<p>In this series of posts, we will look at the different ways that numbers are stored and processed in computers and other electronic devices, as well as some details of the specific data formats used to represent numeric values in computer memory. An important part of this is the binary numeral system, since we usually think of digital data as being in binary form. The binary and decimal systems both use a position-value notation, and this first post will focus on some of the common characteristics of this type of system, and how this allows numbers to be expressed in different bases.</p>
 
 <h3 id="the-role-of-numerals">The role of numerals</h3>
 
