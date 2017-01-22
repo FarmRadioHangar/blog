@@ -73,7 +73,7 @@ $$
 
 $$
   \begin{align}
-    rS\_n &= r(1 + r + r^2 + \dots + r^{n - 1}) \\\
+    rS\_n &= r(1 + r + r^2 + \dots + r^{n - 1}) \\
          &= r + r^2 + \dots + r^n.
   \end{align}
 $$ 
@@ -313,7 +313,7 @@ $$
 
 &hellip;which shows that the base $m$ representation of $n$ is indeed $r\_p r\_{p-1} \dots r\_0$.
 
-![](/content/images/2017/01/euclid.jpg)
+![](/images/2017/01/euclid.jpg)
 
 As an example, here we show the steps for converting the decimal number 2,958,409,950 to base 16. In a program implementation, we typically need to reverse the result for the digits to appear in the order we expect. 
 
