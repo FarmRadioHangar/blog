@@ -73,7 +73,7 @@ $$
 
 $$
   \begin{align}
-    rS\_n &= r(1 + r + r^2 + \dots + r^{n - 1}) \\\\
+    rS\_n &= r(1 + r + r^2 + \dots + r^{n - 1}) \\\\\
          &= r + r^2 + \dots + r^n.
   \end{align}
 $$ 
