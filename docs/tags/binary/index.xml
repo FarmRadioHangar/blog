@@ -530,7 +530,7 @@ $$&lt;/p&gt;
 
 &lt;p&gt;If this takes $q$ steps, then $q$ is the quotient, and the value of $n^{(q)}$ is the remainder. Clearly, the running time of this algorithm is linear in the size of $q$, which is not so great. Later, we will look at more efficient methods, involving already mentioned bit shifts.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;/**
+&lt;pre&gt;&lt;code&gt;/*
  * Slow division algorithm
  */
 int quot_rem (int n, int d, int *rem)
