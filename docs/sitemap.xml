@@ -7,6 +7,11 @@
   </url>
   
   <url>
+    <loc>http://hangar.farmradio.fm/post/number-representation-in-digital-electronics-part-i/</loc>
+    <lastmod>2017-01-22T13:37:00+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://hangar.farmradio.fm/post/hello-mathjax-and-highligh/</loc>
     <lastmod>2016-12-16T14:54:24+03:00</lastmod>
   </url>
@@ -27,14 +32,32 @@
   </url>
   
   <url>
+    <loc>http://hangar.farmradio.fm/tags/basis/</loc>
+    <lastmod>2017-01-22T13:37:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://hangar.farmradio.fm/tags/beep/</loc>
     <lastmod>2016-02-04T15:26:39+03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>http://hangar.farmradio.fm/tags/binary/</loc>
+    <lastmod>2017-01-22T13:37:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://hangar.farmradio.fm/tags/code/</loc>
     <lastmod>2016-12-16T14:54:24+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/tags/decimal/</loc>
+    <lastmod>2017-01-22T13:37:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -69,8 +92,26 @@
   </url>
   
   <url>
+    <loc>http://hangar.farmradio.fm/tags/number/</loc>
+    <lastmod>2017-01-22T13:37:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/tags/numeral/</loc>
+    <lastmod>2017-01-22T13:37:00+02:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://hangar.farmradio.fm/post/</loc>
     <lastmod>2017-01-31T20:47:44+03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://hangar.farmradio.fm/tags/representation/</loc>
+    <lastmod>2017-01-22T13:37:00+02:00</lastmod>
     <priority>0</priority>
   </url>
   
