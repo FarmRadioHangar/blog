@@ -9,7 +9,7 @@ menu     = ""
 author   = "johannes"
 +++
 
-In this series of posts, we will look at the different ways that numbers are stored and processed in computers and other electronic devices, as well as some details of the specific data formats used to represent numeric values in computer memory. An important part of this is the binary numeral system, since we usually think of digital data as being in binary form. The binary and decimal systems both use a position-value notation, and this first post will focus on some of the common characteristics of this type of system, and how this allows numbers to be expressed in different bases.
+In this series of posts, we will look at the different ways that numbers are stored and processed in computers and other electronic devices, as well as some details of the specific data formats used to represent numeric values in computer memory. An important part of this is the binary numeral system, since we usually think of digital data as being in binary form. The binary and decimal systems both use a position-value notation, and this first post will focus on some of the common characteristics of this type of system, and how these allow numbers to be expressed in different bases.
 
 ### The role of numerals
 
@@ -37,7 +37,7 @@ $$
 n = a\_q b^q + \cdots + a\_2 b^2 + a\_1 b^1 + a\_0 \text{ where } 0 \le a\_i < b \text{ for all $ i $, and $ a\_q \ne 0 $}.
 $$
 
-The length of this sequence is $q + 1$, for some integer $q \ge 0$.  To express $q$ in terms of $n$, first consider the real number $x$ such that $b^x = n.$ Then $x = \log\_b n,$ and $q$ is the largest integer less than or equal to $x$. This mapping is known as the *floor* function and we write $q = \lfloor\log_b n\rfloor$. Then, if 
+The length of this sequence is $q + 1$, for some integer $q \ge 0$.  To express $q$ in terms of $n$, first consider the real number $x$ such that $b^x = n.$ Then $x = \log\_b n,$ and $q$ is the largest integer less than or equal to $x$. This mapping is known as the *floor* function and we write $q = \lfloor\log_b n\rfloor$. Then, as we will see, if 
 
 $$
 n = \\!\\!\\! \sum\_{i=0}^{\lfloor\log\_b n\rfloor} \\!\\!\\! a\_i b^i \; (0 \le a\_i < b)
