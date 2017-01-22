@@ -73,12 +73,14 @@ $$
 
 $$
   \begin{align}
-    rS\_n &= r(1 + r + r^2 + \dots + r^{n - 1}) \\
+    rS\_n &= r(1 + r + r^2 + \dots + r^{n - 1}) \\\\
          &= r + r^2 + \dots + r^n.
   \end{align}
 $$ 
 
-Then, $rS\_n - S\_n = S\_n(r - 1) = (r + r^2 + \dots + r^n) - (1 + r + r^2 + \dots + r^{n - 1})$ and $S\_n = \frac{r^n - 1}{r - 1}$. We will now state the basis representation theorem in more formal terms.
+Then, $rS\_n - S\_n = S\_n(r - 1) = (r + r^2 + \dots + r^n) - (1 + r + r^2 + \dots + r^{n - 1})$ and $S\_n = \frac{r^n - 1}{r - 1}$. 
+
+We will now state the basis representation theorem in more formal terms.
 
 *Theorem.* Given a base $b$, where $b$ is any integer greater than one, and a natural number $n$, there exist integers $d\_0, d\_1, \dots, d\_q \; (0 \le d\_i < b)$ 
 such that $n = d\_q b^q + \cdots + d\_2 b^2 + d\_1 b^1 + d\_0$ and $d\_q \ne 0$. We call this the representation of $n$ in base $b$. Furthermore, this representation is unique.
