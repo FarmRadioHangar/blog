@@ -11,7 +11,7 @@ menu     = ""
 author   = "johannes"
 +++
 
-In this series of posts, we will look at the different ways that numbers are stored and processed in computers and other electronic devices, as well as some details of the specific data formats used to represent numeric values in computer memory. An important part of this is the binary numeral system, since we usually think of digital data as being in binary form. The binary and decimal systems both use a position-value notation, and this first post will focus on some of the common characteristics of this type of system, and how they allow numbers to be expressed in different bases.
+In this series of posts, we will look at the different ways that numbers are stored and processed in computers and other electronic devices, as well as some details of the specific data formats used to represent numeric values in computer memory. An important part of this is the binary numeral system, since we usually think of digital data as being in binary form. The binary and decimal systems both use a position-value notation, and this first post will focus on some of the common characteristics of this type of system, and how this allows numbers to be expressed in different bases.
 
 ### The role of numerals
 
