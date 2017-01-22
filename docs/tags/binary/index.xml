@@ -81,7 +81,7 @@ $$&lt;/p&gt;
 
 &lt;p&gt;$$
   \begin{align}
-    rS_n &amp;amp;= r(1 + r + r^2 + \dots + r^{n - 1}) \&lt;br /&gt;
+    rS_n &amp;amp;= r(1 + r + r^2 + \dots + r^{n - 1}) \\&lt;br /&gt;
          &amp;amp;= r + r^2 + \dots + r^n.
   \end{align}
 $$&lt;/p&gt;
