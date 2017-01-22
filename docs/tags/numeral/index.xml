@@ -100,7 +100,7 @@ such that $n = d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + d_0$ and $d_q \ne 0$. We c
 &lt;p&gt;The argument is by induction on $n$ and the statement we would like to prove is the following:&lt;/p&gt;
 
 &lt;p&gt;$$
-P(n) \equiv \forall b \in \mathbb{Z} \; (b &amp;gt; 1), \exists q \in \mathbb{Z} \; (q \ge 0), d_0, d_1, \dots, d_q \in \mathbb{Z} \; (0 \le d_i &amp;lt; b) \; \text{s.t.} \\ n = d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + d_0 \; \text{and where} \; d_q \ne 0.
+P(n) \equiv \forall b \in \mathbb{Z} \; (b &amp;gt; 1), \exists q \in \mathbb{Z} \; (q \ge 0), d_0, d_1, \dots, d_q \in \mathbb{Z} \; (0 \le d_i &amp;lt; b) \; \text{s.t.} \\\ n = d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + d_0 \; \text{and where} \; d_q \ne 0.
 $$&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Base case:&lt;/em&gt; For $n = 1$, set $q = 0$ and $d_0 = n = 1$. Then, $P(1)$ holds.&lt;/p&gt;
@@ -115,7 +115,7 @@ $$&lt;/p&gt;
 
 &lt;p&gt;$$
     \begin{align}
-      k &amp;amp;= d_q b^q + \cdots + d_j b^j + (b - 1)b^{j - 1} + \cdots + (b - 1)b^2 + (b - 1)b + (b - 1) \&lt;br /&gt;
+      k &amp;amp;= d_q b^q + \cdots + d_j b^j + (b - 1)b^{j - 1} + \cdots + (b - 1)b^2 + (b - 1)b + (b - 1) \\&lt;br /&gt;
         &amp;amp;= d_q b^q + \cdots + d_j b^j + (b - 1)(1 + b + b^2 + \cdots + b^{j - 1})
     \end{align}
   $$&lt;/p&gt;
@@ -124,8 +124,8 @@ $$&lt;/p&gt;
 
 &lt;p&gt;$$
     \begin{align}
-                   k &amp;amp;= d_q b^q + \cdots + d_j b^j + b^j - 1 \&lt;br /&gt;
-      \implies k + 1 &amp;amp;= d_q b^q + \cdots + d_j b^j + b^j \&lt;br /&gt;
+                   k &amp;amp;= d_q b^q + \cdots + d_j b^j + b^j - 1 \\&lt;br /&gt;
+      \implies k + 1 &amp;amp;= d_q b^q + \cdots + d_j b^j + b^j \\&lt;br /&gt;
                      &amp;amp;= d_q b^q + \cdots + (d_j + 1) b^j
     \end{align}
   $$&lt;/p&gt;
@@ -144,7 +144,7 @@ $$&lt;/p&gt;
 
 &lt;p&gt;$$
     \begin{align}
-                   k &amp;amp;= b^{q + 1} - 1 \&lt;br /&gt;
+                   k &amp;amp;= b^{q + 1} - 1 \\&lt;br /&gt;
       \implies k + 1 &amp;amp;= b^{q + 1}
     \end{align}
   $$&lt;/p&gt;
@@ -159,7 +159,7 @@ $$&lt;/p&gt;
 
 &lt;p&gt;$$
   \begin{align}
-    n &amp;amp;= c_q b^q + \cdots + c_2 b^2 + c_1 b^1 + c_0 \&lt;br /&gt;
+    n &amp;amp;= c_q b^q + \cdots + c_2 b^2 + c_1 b^1 + c_0 \\&lt;br /&gt;
       &amp;amp;= d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + d_0
   \end{align}
 $$&lt;/p&gt;
@@ -219,10 +219,10 @@ uint32_t stoi (const char *str, int radix)
 
 &lt;p&gt;$$
   \begin{align}
-    s_0 &amp;amp;= d_q \&lt;br /&gt;
-    s_1 &amp;amp;= b s_0 + d_{q-1} = d_q b + d_{q-1} \&lt;br /&gt;
-    s_2 &amp;amp;= b s_1 + d_{q-2} = b(d_q b + d_{q-1}) + d_{q-2} \&lt;br /&gt;
-    s_3 &amp;amp;= b s_2 + d_{q-3} = b(b(d_q b + d_{q-1}) + d_{q-2}) + d_{q-3} \&lt;br /&gt;
+    s_0 &amp;amp;= d_q \\&lt;br /&gt;
+    s_1 &amp;amp;= b s_0 + d_{q-1} = d_q b + d_{q-1} \\&lt;br /&gt;
+    s_2 &amp;amp;= b s_1 + d_{q-2} = b(d_q b + d_{q-1}) + d_{q-2} \\&lt;br /&gt;
+    s_3 &amp;amp;= b s_2 + d_{q-3} = b(b(d_q b + d_{q-1}) + d_{q-2}) + d_{q-3} \\&lt;br /&gt;
   \end{align}
 $$&lt;/p&gt;
 
@@ -230,11 +230,11 @@ $$&lt;/p&gt;
 
 &lt;p&gt;$$
   \begin{align}
-    s_q &amp;amp;=b( \cdots (b(d_q b + d_{q-1}) + d_{q-2}) \cdots) + d_0 \&lt;br /&gt;
-         &amp;amp;=b( \cdots (b(d_q b^2 + d_{q-1} b + d_{q-2}) + d_{q-3}) \cdots) + d_0 \&lt;br /&gt;
-         &amp;amp;=b( \cdots (b(d_q b^3 + d_{q-1} b^2 +  d_{q-2} b + d_{q-3}) \cdots) + d_0 \&lt;br /&gt;
-         &amp;amp; \quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \&lt;br /&gt;
-         &amp;amp;=d_q b^q + d_{q-1} b^{q-1} + \cdots + d_1 b + d_0. \&lt;br /&gt;
+    s_q &amp;amp;=b( \cdots (b(d_q b + d_{q-1}) + d_{q-2}) \cdots) + d_0 \\&lt;br /&gt;
+         &amp;amp;=b( \cdots (b(d_q b^2 + d_{q-1} b + d_{q-2}) + d_{q-3}) \cdots) + d_0 \\&lt;br /&gt;
+         &amp;amp;=b( \cdots (b(d_q b^3 + d_{q-1} b^2 +  d_{q-2} b + d_{q-3}) \cdots) + d_0 \\&lt;br /&gt;
+         &amp;amp; \quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \\&lt;br /&gt;
+         &amp;amp;=d_q b^q + d_{q-1} b^{q-1} + \cdots + d_1 b + d_0. \\&lt;br /&gt;
   \end{align}
 $$&lt;/p&gt;
 
@@ -265,7 +265,7 @@ atoi base
 
 &lt;p&gt;$$
   \begin{align}
-q &amp;amp;= a_sm^{s-1} + a_{s-1}m^{s-2} + \cdots + a_2m + a_1, \text{ and } \&lt;br /&gt;
+q &amp;amp;= a_sm^{s-1} + a_{s-1}m^{s-2} + \cdots + a_2m + a_1, \text{ and } \\&lt;br /&gt;
 r &amp;amp;= a_0
   \end{align}
 $$&lt;/p&gt;
@@ -274,23 +274,10 @@ $$&lt;/p&gt;
 
 &lt;p&gt;$$
   \begin{align}
-n &amp;amp;= a_sm^s + a_{s-1}m^{s-1} + \cdots + a_2m^2 + a_1m + a_0 \&lt;br /&gt;
-  &amp;amp;= (\underbrace{a_sm^{s-1} + a_{s-1}m^{s-2} + \cdots + a_2m + a_1}_{q})m + r. \&lt;br /&gt;
+n &amp;amp;= a_sm^s + a_{s-1}m^{s-1} + \cdots + a_2m^2 + a_1m + a_0 \\&lt;br /&gt;
+  &amp;amp;= (\underbrace{a_sm^{s-1} + a_{s-1}m^{s-2} + \cdots + a_2m + a_1}_{q})m + r. \\&lt;br /&gt;
   \end{align}
 $$&lt;/p&gt;
-
-&lt;!--
-Now, given a pair of integers $q′$ and $r′$, such that $n = q′m + r′$, there exists a representation $q′ = b\_tm^t + b\_{t-1}m^{t-1} + \cdots + b\_2m^2 + b\_1m + b\_0$, so that
-
-$$
-\begin{align}
-  n &amp;= (\overbrace{b\_tm^t + b\_{t-1}m^{t-1} + \cdots + b\_2m^2 + b\_1m + b\_0}^{q′})m + r′ \\\
-    &amp;= b\_tm^{t+1} + b\_{t-1}m^t + \cdots + b\_2m^3 + b\_1m^2 + b\_0m + r′ \\\
-\end{align}
-$$
-
-and by comparing these two representations, coefficient by coefficient, it is evident that $q′ = \sum\_{i=0}^t b\_im^i = \sum\_{j=1}^{s} a\_jm^{j-1} = q$ and $r′ = a\_0 = r$. 
---&gt;
 
 &lt;h4 id=&#34;algorithm&#34;&gt;Algorithm&lt;/h4&gt;
 
@@ -298,9 +285,9 @@ and by comparing these two representations, coefficient by coefficient, it is ev
 
 &lt;p&gt;$$
   \begin{align}
-    n &amp;amp;= q_0m + r_0, &amp;amp;&amp;amp; 0 \le r_0 &amp;lt; m, \&lt;br /&gt;
-    q_0 &amp;amp;= q_1m + r_1, &amp;amp;&amp;amp; 0 \le r_1 &amp;lt; m, \&lt;br /&gt;
-    q_1 &amp;amp;= q_2m + r_2, &amp;amp;&amp;amp; 0 \le r_2 &amp;lt; m, \&lt;br /&gt;
+    n &amp;amp;= q_0m + r_0, &amp;amp;&amp;amp; 0 \le r_0 &amp;lt; m, \\&lt;br /&gt;
+    q_0 &amp;amp;= q_1m + r_1, &amp;amp;&amp;amp; 0 \le r_1 &amp;lt; m, \\&lt;br /&gt;
+    q_1 &amp;amp;= q_2m + r_2, &amp;amp;&amp;amp; 0 \le r_2 &amp;lt; m, \\&lt;br /&gt;
     q_2 &amp;amp;= \dots
   \end{align}
 $$&lt;/p&gt;
@@ -309,16 +296,16 @@ $$&lt;/p&gt;
 
 &lt;p&gt;$$
   \begin{align}
-     n &amp;amp;= q_0m + r_0 \&lt;br /&gt;
-       &amp;amp;= (q_1m + r_1)m + r_0 \&lt;br /&gt;
-       &amp;amp;= ((q_2m + r_2)m + r_1)m + r_0 \&lt;br /&gt;
-       &amp;amp; \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \&lt;br /&gt;
-       &amp;amp;= (( \cdots (q_{p-1}m + r_{p-1})m + \cdots + r_2)m + r_1)m + r_0 \&lt;br /&gt;
-       &amp;amp;= (( \cdots ((q_pm + r_p)m + r_{p-1})m + \cdots + r_2)m + r_1)m + r_0 \&lt;br /&gt;
-       &amp;amp;= (( \cdots (r_pm + r_{p-1})m + \cdots + r_2)m + r_1)m + r_0 \&lt;br /&gt;
-       &amp;amp;= (( \cdots (r_pm^2 + r_{p-1}m + r_{p-2})m + \cdots + r_2)m + r_1)m + r_0 \&lt;br /&gt;
-       &amp;amp;= (( \cdots (r_pm^3 + r_{p-1}m^2 + r_{p-2}m + r_{p-3})m + \cdots + r_2)m + r_1)m + r_0 \&lt;br /&gt;
-       &amp;amp; \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \&lt;br /&gt;
+     n &amp;amp;= q_0m + r_0 \\&lt;br /&gt;
+       &amp;amp;= (q_1m + r_1)m + r_0 \\&lt;br /&gt;
+       &amp;amp;= ((q_2m + r_2)m + r_1)m + r_0 \\&lt;br /&gt;
+       &amp;amp; \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \\&lt;br /&gt;
+       &amp;amp;= (( \cdots (q_{p-1}m + r_{p-1})m + \cdots + r_2)m + r_1)m + r_0 \\&lt;br /&gt;
+       &amp;amp;= (( \cdots ((q_pm + r_p)m + r_{p-1})m + \cdots + r_2)m + r_1)m + r_0 \\&lt;br /&gt;
+       &amp;amp;= (( \cdots (r_pm + r_{p-1})m + \cdots + r_2)m + r_1)m + r_0 \\&lt;br /&gt;
+       &amp;amp;= (( \cdots (r_pm^2 + r_{p-1}m + r_{p-2})m + \cdots + r_2)m + r_1)m + r_0 \\&lt;br /&gt;
+       &amp;amp;= (( \cdots (r_pm^3 + r_{p-1}m^2 + r_{p-2}m + r_{p-3})m + \cdots + r_2)m + r_1)m + r_0 \\&lt;br /&gt;
+       &amp;amp; \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \\&lt;br /&gt;
        &amp;amp;= r_pm^p + r_{p-1}m^{p-1} + \cdots + r_2m^2 + r_1m + r_0
   \end{align}
 $$&lt;/p&gt;
@@ -537,9 +524,9 @@ gcc main.c hex_str.o -o main
 
 &lt;p&gt;$$
   \begin{align}
-  n′      &amp;amp;= n - d \&lt;br /&gt;
-  n′′     &amp;amp;= n′ - d \&lt;br /&gt;
-  n^{(3)} &amp;amp;= n′′ - d \&lt;br /&gt;
+  n′      &amp;amp;= n - d \\&lt;br /&gt;
+  n′′     &amp;amp;= n′ - d \\&lt;br /&gt;
+  n^{(3)} &amp;amp;= n′′ - d \\&lt;br /&gt;
   \end{align}
 $$&lt;/p&gt;
 
