@@ -144,23 +144,23 @@ $$&lt;/p&gt;
 
 &lt;p&gt;Now, since we know that $d_j + 1 \le b - 1$, this is also a valid representation of $k + 1$.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;In this case, $d_i = b - 1$ for all $i$. Then&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;In this case, $d_i = b - 1$ for all $i$. Then&lt;/p&gt;
 
 &lt;p&gt;$$
-    k = (b - 1)(1 + b + b^2 + \cdots + b^q).
-  $$&lt;/p&gt;
+  k = (b - 1)(1 + b + b^2 + \cdots + b^q).
+$$&lt;/p&gt;
 
 &lt;p&gt;Once again, applying Lemma 1 tells us that&lt;/p&gt;
 
 &lt;p&gt;$$
-    \begin{align}
-                   k &amp;amp;= b^{q + 1} - 1 \\&lt;br /&gt;
-      \implies k + 1 &amp;amp;= b^{q + 1}
-    \end{align}
-  $$&lt;/p&gt;
+  \begin{align}
+                 k &amp;amp;= b^{q + 1} - 1 \\&lt;br /&gt;
+    \implies k + 1 &amp;amp;= b^{q + 1}
+  \end{align}
+$$&lt;/p&gt;
 
-&lt;p&gt;and we have the representation we need.&lt;/p&gt;
+&lt;p&gt;and we have the representation we need.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Since these cases are exhaustive, we find that $P(k) \implies P(k + 1)$, which proves existence for all $n \ge 1$. Note that it is also possible to represent $0$ in any base, as itself.&lt;/p&gt;
 
