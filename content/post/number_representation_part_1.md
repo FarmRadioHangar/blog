@@ -92,7 +92,7 @@ such that $n = d\_q b^q + \cdots + d\_2 b^2 + d\_1 b^1 + d\_0$ and $d\_q \ne 0$.
 The argument is by induction on $n$ and the statement we would like to prove is the following:
 
 $$
-P(n) \equiv \forall b \in \mathbb{Z} \; (b > 1), \exists q \in \mathbb{Z} \; (q \ge 0), d\_0, d\_1, \dots, d\_q \in \mathbb{Z} \; (0 \le d_i < b) \; \text{s.t.} \\\ n = d\_q b^q + \cdots + d\_2 b^2 + d\_1 b^1 + d\_0 \; \text{and where} \; d\_q \ne 0. 
+P(n) \equiv \forall b \in \mathbb{Z} \; (b > 1), \exists q \in \mathbb{Z} \; (q \ge 0), d\_0, d\_1, \dots, d\_q \in \mathbb{Z} \; (0 \le d_i < b) \; \text{s.t.} \\\\\ n = d\_q b^q + \cdots + d\_2 b^2 + d\_1 b^1 + d\_0 \; \text{and where} \; d\_q \ne 0. 
 $$
 
 *Base case:* For $n = 1$, set $q = 0$ and $d\_0 = n = 1$. Then, $P(1)$ holds.
@@ -105,7 +105,7 @@ $$
 
   $$
     \begin{align}
-      k &= d\_q b^q + \cdots + d\_j b^j + (b - 1)b^{j - 1} + \cdots + (b - 1)b^2 + (b - 1)b + (b - 1) \\\
+      k &= d\_q b^q + \cdots + d\_j b^j + (b - 1)b^{j - 1} + \cdots + (b - 1)b^2 + (b - 1)b + (b - 1) \\\\\
         &= d\_q b^q + \cdots + d\_j b^j + (b - 1)(1 + b + b^2 + \cdots + b^{j - 1}) 
     \end{align}
   $$
@@ -114,8 +114,8 @@ $$
 
   $$
     \begin{align}
-                   k &= d\_q b^q + \cdots + d\_j b^j + b^j - 1 \\\
-      \implies k + 1 &= d\_q b^q + \cdots + d\_j b^j + b^j \\\
+                   k &= d\_q b^q + \cdots + d\_j b^j + b^j - 1 \\\\\
+      \implies k + 1 &= d\_q b^q + \cdots + d\_j b^j + b^j \\\\\
                      &= d\_q b^q + \cdots + (d\_j + 1) b^j 
     \end{align}
   $$
@@ -132,7 +132,7 @@ $$
 
   $$
     \begin{align}
-                   k &= b^{q + 1} - 1 \\\
+                   k &= b^{q + 1} - 1 \\\\\
       \implies k + 1 &= b^{q + 1} 
     \end{align}
   $$
@@ -147,7 +147,7 @@ To prove that $d\_q \dots d\_2 d\_1 d\_0$ is a unique representation of $n$ in b
 
 $$
   \begin{align}
-    n &= c\_q b^q + \cdots + c\_2 b^2 + c\_1 b^1 + c\_0 \\\
+    n &= c\_q b^q + \cdots + c\_2 b^2 + c\_1 b^1 + c\_0 \\\\\
       &= d\_q b^q + \cdots + d\_2 b^2 + d\_1 b^1 + d\_0 
   \end{align}
 $$
@@ -208,10 +208,10 @@ Starting from a string $d\_q d\_{q-1} d\_{q-2} \dots d\_0 $ in base $b$, we comp
 
 $$
   \begin{align}
-    s\_0 &= d_q \\\
-    s\_1 &= b s\_0 + d\_{q-1} = d\_q b + d\_{q-1} \\\
-    s\_2 &= b s\_1 + d\_{q-2} = b(d\_q b + d\_{q-1}) + d\_{q-2} \\\
-    s\_3 &= b s\_2 + d\_{q-3} = b(b(d\_q b + d\_{q-1}) + d\_{q-2}) + d\_{q-3} \\\
+    s\_0 &= d_q \\\\\
+    s\_1 &= b s\_0 + d\_{q-1} = d\_q b + d\_{q-1} \\\\\
+    s\_2 &= b s\_1 + d\_{q-2} = b(d\_q b + d\_{q-1}) + d\_{q-2} \\\\\
+    s\_3 &= b s\_2 + d\_{q-3} = b(b(d\_q b + d\_{q-1}) + d\_{q-2}) + d\_{q-3} \\\\\
   \end{align}
 $$
 
@@ -219,11 +219,11 @@ $$
 
 $$
   \begin{align}
-    s\_q &=b( \cdots (b(d\_q b + d\_{q-1}) + d\_{q-2}) \cdots) + d\_0 \\\
-         &=b( \cdots (b(d\_q b^2 + d\_{q-1} b + d\_{q-2}) + d\_{q-3}) \cdots) + d\_0 \\\
-         &=b( \cdots (b(d\_q b^3 + d\_{q-1} b^2 +  d\_{q-2} b + d\_{q-3}) \cdots) + d\_0 \\\
-         & \quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \\\
-         &=d\_q b^q + d\_{q-1} b^{q-1} + \cdots + d\_1 b + d\_0. \\\
+    s\_q &=b( \cdots (b(d\_q b + d\_{q-1}) + d\_{q-2}) \cdots) + d\_0 \\\\\
+         &=b( \cdots (b(d\_q b^2 + d\_{q-1} b + d\_{q-2}) + d\_{q-3}) \cdots) + d\_0 \\\\\
+         &=b( \cdots (b(d\_q b^3 + d\_{q-1} b^2 +  d\_{q-2} b + d\_{q-3}) \cdots) + d\_0 \\\\\
+         & \quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \\\\\
+         &=d\_q b^q + d\_{q-1} b^{q-1} + \cdots + d\_1 b + d\_0. \\\\\
   \end{align}
 $$
 
@@ -255,7 +255,7 @@ When $m = 1$ (which it isn’t here &mdash; we include this case just for the sa
 
 $$
   \begin{align}
-q &= a\_sm^{s-1} + a\_{s-1}m^{s-2} + \cdots + a\_2m + a\_1, \text{ and } \\\
+q &= a\_sm^{s-1} + a\_{s-1}m^{s-2} + \cdots + a\_2m + a\_1, \text{ and } \\\\\
 r &= a\_0
   \end{align}
 $$
@@ -264,23 +264,10 @@ where $0 \le a\_0 < m$. This means that
 
 $$
   \begin{align}
-n &= a\_sm^s + a\_{s-1}m^{s-1} + \cdots + a\_2m^2 + a\_1m + a_0 \\\
-  &= (\underbrace{a\_sm^{s-1} + a\_{s-1}m^{s-2} + \cdots + a\_2m + a\_1}\_{q})m + r. \\\
+n &= a\_sm^s + a\_{s-1}m^{s-1} + \cdots + a\_2m^2 + a\_1m + a_0 \\\\\
+  &= (\underbrace{a\_sm^{s-1} + a\_{s-1}m^{s-2} + \cdots + a\_2m + a\_1}\_{q})m + r. \\\\\
   \end{align}
 $$
-
-<!--
-Now, given a pair of integers $q′$ and $r′$, such that $n = q′m + r′$, there exists a representation $q′ = b\_tm^t + b\_{t-1}m^{t-1} + \cdots + b\_2m^2 + b\_1m + b\_0$, so that
-
-$$
-\begin{align}
-  n &= (\overbrace{b\_tm^t + b\_{t-1}m^{t-1} + \cdots + b\_2m^2 + b\_1m + b\_0}^{q′})m + r′ \\\
-    &= b\_tm^{t+1} + b\_{t-1}m^t + \cdots + b\_2m^3 + b\_1m^2 + b\_0m + r′ \\\
-\end{align}
-$$
-
-and by comparing these two representations, coefficient by coefficient, it is evident that $q′ = \sum\_{i=0}^t b\_im^i = \sum\_{j=1}^{s} a\_jm^{j-1} = q$ and $r′ = a\_0 = r$. 
--->
 
 #### Algorithm
 
@@ -288,9 +275,9 @@ Let $m$ be our target base, and $n$ the number to translate. Using the division 
 
 $$
   \begin{align}
-    n &= q\_0m + r\_0, && 0 \le r\_0 < m, \\\
-    q\_0 &= q\_1m + r\_1, && 0 \le r\_1 < m, \\\
-    q\_1 &= q\_2m + r\_2, && 0 \le r\_2 < m, \\\
+    n &= q\_0m + r\_0, && 0 \le r\_0 < m, \\\\\
+    q\_0 &= q\_1m + r\_1, && 0 \le r\_1 < m, \\\\\
+    q\_1 &= q\_2m + r\_2, && 0 \le r\_2 < m, \\\\\
     q\_2 &= \dots
   \end{align}
 $$
@@ -299,16 +286,16 @@ Since $q\_k = \frac{q\_{k-1}-r\_k}{m} \wedge r\_k \ge 0 \wedge m > 1 \implies |q
 
 $$
   \begin{align}
-     n &= q\_0m + r\_0 \\\
-       &= (q\_1m + r\_1)m + r\_0 \\\
-       &= ((q\_2m + r\_2)m + r\_1)m + r\_0 \\\
-       & \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \\\
-       &= (( \cdots (q\_{p-1}m + r\_{p-1})m + \cdots + r\_2)m + r\_1)m + r\_0 \\\
-       &= (( \cdots ((q\_pm + r\_p)m + r\_{p-1})m + \cdots + r\_2)m + r\_1)m + r\_0 \\\
-       &= (( \cdots (r\_pm + r\_{p-1})m + \cdots + r\_2)m + r\_1)m + r\_0 \\\
-       &= (( \cdots (r\_pm^2 + r\_{p-1}m + r\_{p-2})m + \cdots + r\_2)m + r\_1)m + r\_0 \\\
-       &= (( \cdots (r\_pm^3 + r\_{p-1}m^2 + r\_{p-2}m + r\_{p-3})m + \cdots + r\_2)m + r\_1)m + r\_0 \\\
-       & \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \\\
+     n &= q\_0m + r\_0 \\\\\
+       &= (q\_1m + r\_1)m + r\_0 \\\\\
+       &= ((q\_2m + r\_2)m + r\_1)m + r\_0 \\\\\
+       & \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \\\\\
+       &= (( \cdots (q\_{p-1}m + r\_{p-1})m + \cdots + r\_2)m + r\_1)m + r\_0 \\\\\
+       &= (( \cdots ((q\_pm + r\_p)m + r\_{p-1})m + \cdots + r\_2)m + r\_1)m + r\_0 \\\\\
+       &= (( \cdots (r\_pm + r\_{p-1})m + \cdots + r\_2)m + r\_1)m + r\_0 \\\\\
+       &= (( \cdots (r\_pm^2 + r\_{p-1}m + r\_{p-2})m + \cdots + r\_2)m + r\_1)m + r\_0 \\\\\
+       &= (( \cdots (r\_pm^3 + r\_{p-1}m^2 + r\_{p-2}m + r\_{p-3})m + \cdots + r\_2)m + r\_1)m + r\_0 \\\\\
+       & \quad\quad\quad\quad\quad\quad\quad\quad\quad\quad \vdots \\\\\
        &= r\_pm^p + r\_{p-1}m^{p-1} + \cdots + r\_2m^2 + r\_1m + r\_0
   \end{align}
 $$
@@ -532,9 +519,9 @@ As a side note, how do we implement division if we are only allowed to use addit
 
 $$
   \begin{align}
-  n′      &= n - d \\\
-  n′′     &= n′ - d \\\
-  n^{(3)} &= n′′ - d \\\
+  n′      &= n - d \\\\\
+  n′′     &= n′ - d \\\\\
+  n^{(3)} &= n′′ - d \\\\\
   \end{align}
 $$
 
