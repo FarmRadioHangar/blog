@@ -23,7 +23,7 @@
 
 &lt;p&gt;Although we sometimes use the two terms interchangeably, numbers and numerals are different things. A &lt;em&gt;numeral&lt;/em&gt; is a symbolic representation of a number.  Numbers are abstract concepts, and numerals are the names and symbols that denote them. &lt;em&gt;Numeral systems&lt;/em&gt; (also called number systems) are formal methods and notation for expressing numbers in concrete form &amp;mdash; that is, as numerals.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;images/2017/01/heh.png&#34; alt=&#34;Heh&#34; style=&#34;width:260px;&#34;&gt;&lt;center style=&#34;margin-top:-20px;&#34;&gt;&lt;small&gt;&lt;i&gt;In the ancient Egyptian hieroglyphic numeral system, the god &lt;a href=&#34;https://en.wikipedia.org/wiki/Heh_(god)&#34;&gt;Heh&lt;/a&gt; symbolized one million.&lt;/i&gt;&lt;/small&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://hangar.farmradio.fm/images/2017/01/heh.png&#34; alt=&#34;Heh&#34; style=&#34;width:260px;&#34;&gt;&lt;center style=&#34;margin-top:-20px;&#34;&gt;&lt;small&gt;&lt;i&gt;In the ancient Egyptian hieroglyphic numeral system, the god &lt;a href=&#34;https://en.wikipedia.org/wiki/Heh_(god)&#34;&gt;Heh&lt;/a&gt; symbolized one million.&lt;/i&gt;&lt;/small&gt;&lt;/center&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;positional-numeral-systems&#34;&gt;Positional numeral systems&lt;/h3&gt;
 
@@ -32,6 +32,26 @@
 &lt;p&gt;$$
 5 \cdot 10^4 + 1 \cdot 10^3 + 3 \cdot 10^2 + 0 \cdot 10^1 + 4 \cdot 10^0 = 51 304
 $$&lt;/p&gt;
+
+&lt;p&gt;Numeral systems of this kind are called &lt;em&gt;positional&lt;/em&gt;. Each digit is assigned a weight, based on its position in the sequence. Another property, shared by all the numeral systems we will consider here, is that they have a &lt;em&gt;uniform&lt;/em&gt; base, i.e., the same base is used in all positions of the string. Let $d_q \dots d_2 d_1 d_0$ denote an arbitrary natural number $n$. In other words, $d_i$ is the digit at position $i$ in the decimal string representation of $n$. Then&lt;/p&gt;
+
+&lt;p&gt;$$
+n = d_q 10^q + \cdots + d_2 10^2 + d_1 10^1 + d_0.
+$$&lt;/p&gt;
+
+&lt;p&gt;More generally, for any radix $b$ we can find coefficients $a_0, a_1, \dots, a_q$, such that&lt;/p&gt;
+
+&lt;p&gt;$$
+n = a_q b^q + \cdots + a_2 b^2 + a_1 b^1 + a_0 \text{ where } 0 \le a_i &amp;lt; b \text{ for all $ i $, and $ a_q \ne 0 $}.
+$$&lt;/p&gt;
+
+&lt;p&gt;The length of this sequence is $q + 1$, for some integer $q \ge 0$.  To express $q$ in terms of $n$, first consider the real number $x$ such that $b^x = n.$ Then $x = \log_b n,$ and $q$ is the largest integer less than or equal to $x$. This mapping is known as the &lt;em&gt;floor&lt;/em&gt; function and we write $q = \lfloor\log_b n\rfloor$. Then, if&lt;/p&gt;
+
+&lt;p&gt;$$
+n = \!\!\! \sum_{i=0}^{\lfloor\log_b n\rfloor} \!\!\! a_i b^i \; (0 \le a_i &amp;lt; b)
+$$&lt;/p&gt;
+
+&lt;p&gt;there is exactly one way in which we can choose these coefficients.&lt;/p&gt;
 </description>
     </item>
     
