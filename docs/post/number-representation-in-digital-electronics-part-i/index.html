@@ -103,6 +103,13 @@
     
 
     
+
+    <style type="text/css">
+      pre code, pre tt {
+        line-height: 1.2;
+      }
+    </style>
+
 </head>
 <body class="nav-closed">
 
@@ -309,23 +316,23 @@ $$</p>
 
 <p>Now, since we know that $d_j + 1 \le b - 1$, this is also a valid representation of $k + 1$.</p></li>
 
-<li><p>In this case, $d_i = b - 1$ for all $i$. Then</p></li>
-</ul>
+<li><p>In this case, $d_i = b - 1$ for all $i$. Then</p>
 
 <p>$$
-    k = (b - 1)(1 + b + b^2 + \cdots + b^q).
-  $$</p>
+  k = (b - 1)(1 + b + b^2 + \cdots + b^q).
+$$</p>
 
 <p>Once again, applying Lemma 1 tells us that</p>
 
 <p>$$
-    \begin{align}
-                   k &amp;= b^{q + 1} - 1 \\<br />
-      \implies k + 1 &amp;= b^{q + 1}
-    \end{align}
-  $$</p>
+  \begin{align}
+                 k &amp;= b^{q + 1} - 1 \\<br />
+    \implies k + 1 &amp;= b^{q + 1}
+  \end{align}
+$$</p>
 
-<p>and we have the representation we need.</p>
+<p>and we have the representation we need.</p></li>
+</ul>
 
 <p>Since these cases are exhaustive, we find that $P(k) \implies P(k + 1)$, which proves existence for all $n \ge 1$. Note that it is also possible to represent $0$ in any base, as itself.</p>
 
