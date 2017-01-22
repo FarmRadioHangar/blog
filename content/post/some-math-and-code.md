@@ -41,4 +41,10 @@ clean:
 	rm -rf $(BUILDDIR)/*
 ```
 
+
 And that is that!
+
+
+or lets at least add some kind of image
+{{< figure src="/images/2017/Pyramid_Blaster.png" title="Ghetto Illuminati" >}}
+
