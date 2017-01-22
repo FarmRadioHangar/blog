@@ -106,7 +106,7 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Theorem.&lt;/em&gt; Given a base $b$, where $b$ is any integer greater than one, and a natural number $n$, there exist integers $d_0, d_1, \dots, d_q \; (0 \le d_i &amp;lt; b)$
 such that $n = d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + d_0$ and $d_q \ne 0$. We call this the representation of $n$ in base $b$. Furthermore, this representation is unique.&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; The proof has two parts. We first have to show that a representation exists for every $n$, and subsequently that any such representation is unique.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Proof.&lt;/em&gt; The proof has two parts. First we have to show that a representation exists for every $n$, and subsequently that any such representation is unique.&lt;/p&gt;
 
 &lt;h4 id=&#34;proof-of-existence&#34;&gt;Proof of existence&lt;/h4&gt;
 
@@ -123,30 +123,28 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Inductive step:&lt;/em&gt; We consider two cases.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;There exists at least one index $i$ for which $d_i &amp;lt; b - 1$. Let $j$ be the smallest such index. If $j = 0$, then $d_0 + 1 \le b - 1$ and therefore $d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + (d_0 + 1)$ is a valid representation of $k + 1$. Otherwise, if $j &amp;gt; 0$, then&lt;/li&gt;
-&lt;/ul&gt;
+&lt;li&gt;&lt;p&gt;There exists at least one index $i$ for which $d_i &amp;lt; b - 1$. Let $j$ be the smallest such index. If $j = 0$, then $d_0 + 1 \le b - 1$ and therefore $d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + (d_0 + 1)$ is a valid representation of $k + 1$. Otherwise, if $j &amp;gt; 0$, then&lt;/p&gt;
 
 &lt;p&gt;$$
-    \begin{align}
-      k &amp;amp;= d_q b^q + \cdots + d_j b^j + (b - 1)b^{j - 1} + \cdots + (b - 1)b^2 + (b - 1)b + (b - 1) \\&lt;br /&gt;
-        &amp;amp;= d_q b^q + \cdots + d_j b^j + (b - 1)(1 + b + b^2 + \cdots + b^{j - 1})
-    \end{align}
-  $$&lt;/p&gt;
+  \begin{align}
+    k &amp;amp;= d_q b^q + \cdots + d_j b^j + (b - 1)b^{j - 1} + \cdots + (b - 1)b^2 + (b - 1)b + (b - 1) \\&lt;br /&gt;
+      &amp;amp;= d_q b^q + \cdots + d_j b^j + (b - 1)(1 + b + b^2 + \cdots + b^{j - 1})
+  \end{align}
+$$&lt;/p&gt;
 
 &lt;p&gt;Then, by Lemma 1:&lt;/p&gt;
 
 &lt;p&gt;$$
-    \begin{align}
-                   k &amp;amp;= d_q b^q + \cdots + d_j b^j + b^j - 1 \\&lt;br /&gt;
-      \implies k + 1 &amp;amp;= d_q b^q + \cdots + d_j b^j + b^j \\&lt;br /&gt;
-                     &amp;amp;= d_q b^q + \cdots + (d_j + 1) b^j
-    \end{align}
-  $$&lt;/p&gt;
+  \begin{align}
+                 k &amp;amp;= d_q b^q + \cdots + d_j b^j + b^j - 1 \\&lt;br /&gt;
+    \implies k + 1 &amp;amp;= d_q b^q + \cdots + d_j b^j + b^j \\&lt;br /&gt;
+                   &amp;amp;= d_q b^q + \cdots + (d_j + 1) b^j
+  \end{align}
+$$&lt;/p&gt;
 
-&lt;p&gt;Now, since we know that $d_j + 1 \le b - 1$, this is also a valid representation of $k + 1$.&lt;/p&gt;
+&lt;p&gt;Now, since we know that $d_j + 1 \le b - 1$, this is also a valid representation of $k + 1$.&lt;/p&gt;&lt;/li&gt;
 
-&lt;ul&gt;
-&lt;li&gt;In this case, $d_i = b - 1$ for all $i$. Then&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;In this case, $d_i = b - 1$ for all $i$. Then&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;$$

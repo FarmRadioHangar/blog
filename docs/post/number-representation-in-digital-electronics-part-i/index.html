@@ -271,7 +271,7 @@ $$</p>
 <p><em>Theorem.</em> Given a base $b$, where $b$ is any integer greater than one, and a natural number $n$, there exist integers $d_0, d_1, \dots, d_q \; (0 \le d_i &lt; b)$
 such that $n = d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + d_0$ and $d_q \ne 0$. We call this the representation of $n$ in base $b$. Furthermore, this representation is unique.</p>
 
-<p><em>Proof.</em> The proof has two parts. We first have to show that a representation exists for every $n$, and subsequently that any such representation is unique.</p>
+<p><em>Proof.</em> The proof has two parts. First we have to show that a representation exists for every $n$, and subsequently that any such representation is unique.</p>
 
 <h4 id="proof-of-existence">Proof of existence</h4>
 
@@ -288,30 +288,28 @@ $$</p>
 <p><em>Inductive step:</em> We consider two cases.</p>
 
 <ul>
-<li>There exists at least one index $i$ for which $d_i &lt; b - 1$. Let $j$ be the smallest such index. If $j = 0$, then $d_0 + 1 \le b - 1$ and therefore $d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + (d_0 + 1)$ is a valid representation of $k + 1$. Otherwise, if $j &gt; 0$, then</li>
-</ul>
+<li><p>There exists at least one index $i$ for which $d_i &lt; b - 1$. Let $j$ be the smallest such index. If $j = 0$, then $d_0 + 1 \le b - 1$ and therefore $d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + (d_0 + 1)$ is a valid representation of $k + 1$. Otherwise, if $j &gt; 0$, then</p>
 
 <p>$$
-    \begin{align}
-      k &amp;= d_q b^q + \cdots + d_j b^j + (b - 1)b^{j - 1} + \cdots + (b - 1)b^2 + (b - 1)b + (b - 1) \\<br />
-        &amp;= d_q b^q + \cdots + d_j b^j + (b - 1)(1 + b + b^2 + \cdots + b^{j - 1})
-    \end{align}
-  $$</p>
+  \begin{align}
+    k &amp;= d_q b^q + \cdots + d_j b^j + (b - 1)b^{j - 1} + \cdots + (b - 1)b^2 + (b - 1)b + (b - 1) \\<br />
+      &amp;= d_q b^q + \cdots + d_j b^j + (b - 1)(1 + b + b^2 + \cdots + b^{j - 1})
+  \end{align}
+$$</p>
 
 <p>Then, by Lemma 1:</p>
 
 <p>$$
-    \begin{align}
-                   k &amp;= d_q b^q + \cdots + d_j b^j + b^j - 1 \\<br />
-      \implies k + 1 &amp;= d_q b^q + \cdots + d_j b^j + b^j \\<br />
-                     &amp;= d_q b^q + \cdots + (d_j + 1) b^j
-    \end{align}
-  $$</p>
+  \begin{align}
+                 k &amp;= d_q b^q + \cdots + d_j b^j + b^j - 1 \\<br />
+    \implies k + 1 &amp;= d_q b^q + \cdots + d_j b^j + b^j \\<br />
+                   &amp;= d_q b^q + \cdots + (d_j + 1) b^j
+  \end{align}
+$$</p>
 
-<p>Now, since we know that $d_j + 1 \le b - 1$, this is also a valid representation of $k + 1$.</p>
+<p>Now, since we know that $d_j + 1 \le b - 1$, this is also a valid representation of $k + 1$.</p></li>
 
-<ul>
-<li>In this case, $d_i = b - 1$ for all $i$. Then</li>
+<li><p>In this case, $d_i = b - 1$ for all $i$. Then</p></li>
 </ul>
 
 <p>$$
