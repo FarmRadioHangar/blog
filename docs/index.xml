@@ -585,7 +585,7 @@ $, as the following test will confirm:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;and [(atoi b . itoa b) n == n | n &amp;lt;- [0..100], b &amp;lt;- [2..16]]
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;In the next part of this series, we will take a more detailed look at integer representation in the binary numeral system.&lt;/p&gt;
+&lt;p&gt;In the next part of this series, we will have a closer look at integer representation in the binary numeral system.&lt;/p&gt;
 </description>
     </item>
     
