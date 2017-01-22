@@ -81,7 +81,7 @@ $$&lt;/p&gt;
 
 &lt;p&gt;$$
   \begin{align}
-    rS_n &amp;amp;= r(1 + r + r^2 + \dots + r^{n - 1}) \&lt;br /&gt;
+    rS_n &amp;amp;= r(1 + r + r^2 + \dots + r^{n - 1}) &lt;br /&gt;
          &amp;amp;= r + r^2 + \dots + r^n.
   \end{align}
 $$&lt;/p&gt;
@@ -323,7 +323,7 @@ $$&lt;/p&gt;
 
 &lt;p&gt;&amp;hellip;which shows that the base $m$ representation of $n$ is indeed $r_p r_{p-1} \dots r_0$.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://hangar.farmradio.fm/content/images/2017/01/euclid.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://hangar.farmradio.fm/images/2017/01/euclid.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;As an example, here we show the steps for converting the decimal number 2,958,409,950 to base 16. In a program implementation, we typically need to reverse the result for the digits to appear in the order we expect.&lt;/p&gt;
 
