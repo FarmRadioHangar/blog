@@ -15,7 +15,7 @@
 
 
 <meta name="twitter:title" content="Number representation in digital electronics -- Part 1 (Numerical bases)"/>
-<meta name="twitter:description" content="In this series of posts, we will look at the different ways that numbers are stored and processed in computers and other electronic devices, as well as some details of the specific data formats used to represent numeric values in computer memory. An important part of this is the binary numeral system, since we usually think of digital data as being in binary form. The binary and decimal systems both use a position-value notation, and this first post will focus on some of the common characteristics of this type of system, and how this allows numbers to be expressed in different bases."/>
+<meta name="twitter:description" content="In this series of posts, we will look at the different ways that numbers are stored and processed in computers and other electronic devices, as well as some details of the specific data formats used to represent numeric values in computer memory. An important part of this is the binary numeral system, since we usually think of digital data as being in binary form. The binary and decimal systems both use a position-value notation, and this first post will focus on some of the common characteristics of this type of system, and how these allow numbers to be expressed in different bases."/>
 
     <meta name="twitter:site" content="@FRIHangar"/>
 
@@ -77,7 +77,11 @@
         jax: ["input/TeX", "output/SVG"],
         tex2jax: {
           inlineMath: [['$','$'], ['\\(','\\)']],
-          displayMath: [['$$','$$'], ['\[','\]']]
+          displayMath: [['$$','$$'], ['\[','\]']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: { equationNumbers: { autoNumber: "AMS" }, extensions: ["AMSmath.js", "AMSsymbols.js"] }
         },
         CommonHTML: {
           scale: 92
@@ -191,7 +195,7 @@
     <section class="post-content">
       
 
-<p>In this series of posts, we will look at the different ways that numbers are stored and processed in computers and other electronic devices, as well as some details of the specific data formats used to represent numeric values in computer memory. An important part of this is the binary numeral system, since we usually think of digital data as being in binary form. The binary and decimal systems both use a position-value notation, and this first post will focus on some of the common characteristics of this type of system, and how this allows numbers to be expressed in different bases.</p>
+<p>In this series of posts, we will look at the different ways that numbers are stored and processed in computers and other electronic devices, as well as some details of the specific data formats used to represent numeric values in computer memory. An important part of this is the binary numeral system, since we usually think of digital data as being in binary form. The binary and decimal systems both use a position-value notation, and this first post will focus on some of the common characteristics of this type of system, and how these allow numbers to be expressed in different bases.</p>
 
 <h3 id="the-role-of-numerals">The role of numerals</h3>
 
@@ -219,7 +223,7 @@ $$</p>
 n = a_q b^q + \cdots + a_2 b^2 + a_1 b^1 + a_0 \text{ where } 0 \le a_i &lt; b \text{ for all $ i $, and $ a_q \ne 0 $}.
 $$</p>
 
-<p>The length of this sequence is $q + 1$, for some integer $q \ge 0$.  To express $q$ in terms of $n$, first consider the real number $x$ such that $b^x = n.$ Then $x = \log_b n,$ and $q$ is the largest integer less than or equal to $x$. This mapping is known as the <em>floor</em> function and we write $q = \lfloor\log_b n\rfloor$. Then, if</p>
+<p>The length of this sequence is $q + 1$, for some integer $q \ge 0$.  To express $q$ in terms of $n$, first consider the real number $x$ such that $b^x = n.$ Then $x = \log_b n,$ and $q$ is the largest integer less than or equal to $x$. This mapping is known as the <em>floor</em> function and we write $q = \lfloor\log_b n\rfloor$. Then, as we will see, if</p>
 
 <p>$$
 n = \!\!\! \sum_{i=0}^{\lfloor\log_b n\rfloor} \!\!\! a_i b^i \; (0 \le a_i &lt; b)

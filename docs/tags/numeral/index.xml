@@ -17,7 +17,7 @@
       <guid>http://hangar.farmradio.fm/post/number-representation-in-digital-electronics-part-i/</guid>
       <description>
 
-&lt;p&gt;In this series of posts, we will look at the different ways that numbers are stored and processed in computers and other electronic devices, as well as some details of the specific data formats used to represent numeric values in computer memory. An important part of this is the binary numeral system, since we usually think of digital data as being in binary form. The binary and decimal systems both use a position-value notation, and this first post will focus on some of the common characteristics of this type of system, and how this allows numbers to be expressed in different bases.&lt;/p&gt;
+&lt;p&gt;In this series of posts, we will look at the different ways that numbers are stored and processed in computers and other electronic devices, as well as some details of the specific data formats used to represent numeric values in computer memory. An important part of this is the binary numeral system, since we usually think of digital data as being in binary form. The binary and decimal systems both use a position-value notation, and this first post will focus on some of the common characteristics of this type of system, and how these allow numbers to be expressed in different bases.&lt;/p&gt;
 
 &lt;h3 id=&#34;the-role-of-numerals&#34;&gt;The role of numerals&lt;/h3&gt;
 
@@ -45,7 +45,7 @@ $$&lt;/p&gt;
 n = a_q b^q + \cdots + a_2 b^2 + a_1 b^1 + a_0 \text{ where } 0 \le a_i &amp;lt; b \text{ for all $ i $, and $ a_q \ne 0 $}.
 $$&lt;/p&gt;
 
-&lt;p&gt;The length of this sequence is $q + 1$, for some integer $q \ge 0$.  To express $q$ in terms of $n$, first consider the real number $x$ such that $b^x = n.$ Then $x = \log_b n,$ and $q$ is the largest integer less than or equal to $x$. This mapping is known as the &lt;em&gt;floor&lt;/em&gt; function and we write $q = \lfloor\log_b n\rfloor$. Then, if&lt;/p&gt;
+&lt;p&gt;The length of this sequence is $q + 1$, for some integer $q \ge 0$.  To express $q$ in terms of $n$, first consider the real number $x$ such that $b^x = n.$ Then $x = \log_b n,$ and $q$ is the largest integer less than or equal to $x$. This mapping is known as the &lt;em&gt;floor&lt;/em&gt; function and we write $q = \lfloor\log_b n\rfloor$. Then, as we will see, if&lt;/p&gt;
 
 &lt;p&gt;$$
 n = \!\!\! \sum_{i=0}^{\lfloor\log_b n\rfloor} \!\!\! a_i b^i \; (0 \le a_i &amp;lt; b)
