@@ -103,7 +103,7 @@ $$
 
 *Inductive step:* We consider two cases.
 
-* There exists at least one index $i$ for which $d\_i < b - 1$. Let $j$ be the smallest such index. If $j = 0$, then $d\_0 + 1 \le b - 1$ and therefore $d\_q b^q + \cdots + d\_2 b^2 + d\_1 b^1 + (d\_0 + 1)$ is a valid representation of $k + 1$. Otherwise, if $j > 0$, then
+* If there exists at least one index $i$ for which $d\_i < b - 1$, then let $j$ be the smallest such index. If $j = 0$, then $d\_0 + 1 \le b - 1$ and therefore $d\_q b^q + \cdots + d\_2 b^2 + d\_1 b^1 + (d\_0 + 1)$ is a valid representation of $k + 1$. Otherwise, if $j > 0$, then
 
     $$
       \begin{align}
