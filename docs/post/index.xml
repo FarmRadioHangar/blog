@@ -123,7 +123,7 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Inductive step:&lt;/em&gt; We consider two cases.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;There exists at least one index $i$ for which $d_i &amp;lt; b - 1$. Let $j$ be the smallest such index. If $j = 0$, then $d_0 + 1 \le b - 1$ and therefore $d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + (d_0 + 1)$ is a valid representation of $k + 1$. Otherwise, if $j &amp;gt; 0$, then&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;If there exists at least one index $i$ for which $d_i &amp;lt; b - 1$, then let $j$ be the smallest such index. If $j = 0$, then $d_0 + 1 \le b - 1$ and therefore $d_q b^q + \cdots + d_2 b^2 + d_1 b^1 + (d_0 + 1)$ is a valid representation of $k + 1$. Otherwise, if $j &amp;gt; 0$, then&lt;/p&gt;
 
 &lt;p&gt;$$
   \begin{align}
